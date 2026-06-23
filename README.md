@@ -12,12 +12,19 @@ I am a Software Engineering student passionate about building digital experience
 My journey is shaped by curiosity, creativity, and continuous learning as I explore how technology can solve real-world problems.
 
 🧰 Tech Stack
+
 HTML / CSS / JavaScript
+
 React 
+
 UI/UX Design (Figma)
+
 Backend Fundamentals (Python / Node.js)
+
 Git & GitHub
+
 📂 Featured Projects
+
 🌟 Kavaro Agency Website
 
 A digital agency website built to represent my founding brand and creative vision.
