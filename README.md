@@ -1,7 +1,7 @@
 Caroline Njogu – Developer Portfolio
 🌐 Overview
 
-This is my personal developer portfolio showcasing my journey as a Software Engineering student, UI/UX Designer, and Founder of Cavaro Agency.
+This is my personal developer portfolio showcasing my journey as a Software Engineering student, UI/UX Designer, and Founder of Kavaro Agency.
 
 It highlights my skills, projects, and growth as I progress toward becoming a Full-Stack Developer.
 
