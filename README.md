@@ -1,66 +1,49 @@
-Caroline Njogu – Developer Portfolio
-🌐 Overview
+# Caroline Njogu — Portfolio
 
-This is my personal developer portfolio showcasing my journey as a Software Engineering student, UI/UX Designer, and Founder of Kavaro Agency.
+A projects-first portfolio built with React + Vite. Dark, tech-forward,
+built around a "build log" of the journey from education → design →
+engineering, with Finora, Kavaro Agency, Inventory Management System, and
+Wordly Dictionary as the featured work.
 
-It highlights my skills, projects, and growth as I progress toward becoming a Full-Stack Developer.
+## Run locally
 
-🚀 About Me
+```bash
+npm install
+npm run dev
+```
 
-I am a Software Engineering student passionate about building digital experiences through frontend development, backend development, and UI/UX design.
+Then open the local URL Vite prints (usually `http://localhost:5173`).
 
-My journey is shaped by curiosity, creativity, and continuous learning as I explore how technology can solve real-world problems.
+## Build for production
 
-🧰 Tech Stack
+```bash
+npm run build
+```
 
-HTML / CSS / JavaScript
+Outputs static files to `dist/`, ready to deploy to Vercel, Netlify, GitHub
+Pages, or any static host.
 
-React 
+## Structure
 
-UI/UX Design (Figma)
+```
+src/
+  components/
+    Nav.jsx        top navigation
+    Hero.jsx        intro + tagline
+    Projects.jsx     project list (edit the `projects` array to add/reorder)
+    ProjectCard.jsx  single project card
+    About.jsx        bio + journey log
+    Log.jsx          "build log" timeline — the journey from education to now
+    Skills.jsx       grouped skill chips
+    Contact.jsx      links + footer
+  App.jsx
+  App.css
+  index.css
+```
 
-Backend Fundamentals (Python / Node.js)
+## Adding a project later
 
-Git & GitHub
-
-📂 Featured Projects
-
-🌟 Kavaro Agency Website
-
-A digital agency website built to represent my founding brand and creative vision.
-
-📓 Finora – Financial Coach
-
-A financial coaching application designed to help users build better money habits through guidance and insights.
-
-📅 Event Management System
-
-A web application for managing events, attendees, and registrations.
-
-📚 Bookstore App
-
-A simple e-commerce style application for browsing and managing books.
-
-💰 Finora – Financial Coach
-
-A financial coaching application designed to help users build better money habits through personalized guidance, goal tracking, and simplified financial education.
-
-📈 What I’m Learning
-Full-Stack Web Development
-UI/UX Design Principles
-API Integration
-System Design Basics
-Product Thinking
-🎯 Career Goal
-
-To grow into a Full-Stack Developer and Product Builder, while continuing to build Cavaro Agency into a creative digital solutions company.
-
-📫 Contact
-LinkedIn: [www.linkedin.com/in/carolinenjogu]
-GitHub: [https://github.com/caroline568]
-Email: [njogucaroline91@mail.com]
-🧠 Philosophy
-
-“Learning. Building. Improving. Repeating.”
-
-:::
+Open `src/components/Projects.jsx` and add an entry to the `projects` array —
+each one just needs an index, name, tagline, description, stack, and links.
+That's where the Online Bookstore App, Managing Event Attendees, and the
+Task Manager can go once they're ready.
