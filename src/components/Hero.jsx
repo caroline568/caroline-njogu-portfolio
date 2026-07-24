@@ -2,20 +2,20 @@ export default function Hero() {
   return (
     <section id="top" className="hero">
       <p className="hero-eyebrow">
-        <span className="dot" /> Nairobi, Kenya — open to opportunities
+        <span className="dot" /> Nairobi, Kenya — Product Engineer &amp; Founder
       </p>
       <h1 className="hero-title">
-        Caroline Njogu builds digital
+        Caroline Njogu builds
         <br />
-        products, <span className="hero-title-accent">end to end.</span>
+        digital products, <span className="hero-title-accent">end to end.</span>
       </h1>
       <p className="hero-sub">
-        Software engineering student and product designer. I design the
-        interface, then build the system behind it — currently shipping{' '}
+        I take products from problem to shipped code — discovery, design,
+        development, deployment. Currently building{' '}
         <a href="#projects" className="inline-link">
           Finora
-        </a>{' '}
-        and running{' '}
+        </a>
+        , an AI-powered financial coach, and leading{' '}
         <a href="#projects" className="inline-link">
           Kavaro Agency
         </a>
@@ -31,7 +31,7 @@ export default function Hero() {
       </div>
       <p className="hero-log-line">
         <span className="hero-log-hash">$</span> status —{' '}
-        <span className="hero-log-msg">still learning. still building.</span>
+        <span className="hero-log-msg">building in public.</span>
       </p>
     </section>
   )

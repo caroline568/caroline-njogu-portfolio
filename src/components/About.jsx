@@ -5,18 +5,19 @@ export default function About() {
     <section id="about" className="about">
       <div className="section-head">
         <span className="section-eyebrow">01 / About</span>
-        <h2 className="section-title">From understanding people to building systems.</h2>
+        <h2 className="section-title">Idea to shipped product — end to end.</h2>
       </div>
 
       <div className="about-grid">
         <p className="about-copy">
-          I'm a software engineering student at Moringa School and a UI/UX
-          designer who believes the best way to learn is by building in
-          public. Every project is a chance to sharpen my engineering skills,
-          improve my product thinking, and ship something real.
+          I'm a product builder and founder focused on creating AI-powered
+          solutions that solve real-world problems. I combine software
+          engineering and product design to turn ideas into functional,
+          user-centered digital products — from designing the experience to
+          building the systems behind it.
           <br />
           <br />
-          Right now I'm building{' '}
+          Currently building{' '}
           <a
             href="https://github.com/caroline568/finora-financial-coach"
             target="_blank"
@@ -25,9 +26,7 @@ export default function About() {
           >
             Finora
           </a>
-          , an AI-powered personal finance platform for everyday Kenyans —
-          budgeting, saving, and spending insights made simple. Alongside
-          that, I run{' '}
+          , an AI-powered financial coach for everyday Kenyans, and leading{' '}
           <a
             href="https://kavaroagency.com"
             target="_blank"
@@ -36,8 +35,8 @@ export default function About() {
           >
             Kavaro Agency
           </a>
-          , where design and engineering come together to build websites and
-          digital products for startups and small businesses.
+          , where I build modern websites, web applications, and digital
+          solutions.
         </p>
 
         <Log />
