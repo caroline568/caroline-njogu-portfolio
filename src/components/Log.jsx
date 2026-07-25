@@ -1,17 +1,5 @@
 const entries = [
   {
-    hash: 'a1f9c02',
-    when: '2025',
-    title: 'Diploma, Early Childhood Development Education',
-    detail: 'Foundations in communication, patience, and how people learn.',
-  },
-  {
-    hash: 'b6e21d4',
-    when: '2025',
-    title: 'Cybersecurity fundamentals',
-    detail: 'Data protection, network security, risk awareness — first look at systems.',
-  },
-  {
     hash: 'c9027ab',
     when: 'Apr – Nov 2025',
     title: 'Product Design bootcamp, Moringa School',
@@ -34,6 +22,18 @@ const entries = [
     when: 'Jun 2026 →',
     title: 'Building Finora',
     detail: 'AI-powered financial coach for everyday Kenyans — in public, feature by feature.',
+  },
+  {
+    hash: 'b6e21d4',
+    when: 'Earlier',
+    title: 'Cybersecurity fundamentals',
+    detail: 'Data protection, network security, risk awareness — an early look at how systems work.',
+  },
+  {
+    hash: 'a1f9c02',
+    when: 'Earlier',
+    title: 'Diploma, Early Childhood Development Education',
+    detail: 'An earlier foundation in education that strengthened communication, empathy, and understanding how people learn.',
   },
 ]
 

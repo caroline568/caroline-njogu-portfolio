@@ -1,15 +1,41 @@
 const groups = [
   {
     label: 'Engineering',
-    items: ['JavaScript', 'Python', 'React', 'Next.js', 'Flask', 'SQL', 'Git'],
+    items: [
+      'JavaScript',
+      'TypeScript',
+      'Python',
+      'React',
+      'Next.js',
+      'Node.js',
+      'Express.js',
+      'Flask',
+      'REST APIs',
+      'SQL',
+      'PostgreSQL',
+      'Supabase',
+      'Git',
+    ],
   },
   {
     label: 'Design',
-    items: ['UI/UX Design', 'Figma', 'Prototyping', 'User Research'],
+    items: [
+      'UI/UX Design',
+      'Figma',
+      'User Research',
+      'Wireframing',
+      'Prototyping',
+      'Design Systems',
+    ],
   },
   {
     label: 'AI',
-    items: ['Generative AI Tools', 'Prompt Engineering'],
+    items: [
+      'Generative AI',
+      'Prompt Engineering',
+      'OpenAI API',
+      'AI Product Development',
+    ],
   },
 ]
 
@@ -17,7 +43,7 @@ export default function Skills() {
   return (
     <section id="skills" className="skills">
       <div className="section-head">
-        <span className="section-eyebrow">03 / Skills</span>
+        <span className="section-eyebrow">04 / Skills</span>
         <h2 className="section-title">Design and engineering, in one toolkit.</h2>
       </div>
 

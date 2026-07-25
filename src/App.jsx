@@ -1,22 +1,15 @@
-import Nav from './components/Nav.jsx'
-import Hero from './components/Hero.jsx'
-import Projects from './components/Projects.jsx'
-import About from './components/About.jsx'
-import Skills from './components/Skills.jsx'
-import Contact from './components/Contact.jsx'
+import { Routes, Route } from 'react-router-dom'
+import Home from './pages/Home.jsx'
+import FinoraCaseStudy from './pages/FinoraCaseStudy.jsx'
+import KavaroCaseStudy from './pages/KavaroCaseStudy.jsx'
 import './App.css'
 
 export default function App() {
   return (
-    <div className="page">
-      <Nav />
-      <main>
-        <Hero />
-        <Projects />
-        <About />
-        <Skills />
-      </main>
-      <Contact />
-    </div>
+    <Routes>
+      <Route path="/" element={<Home />} />
+      <Route path="/projects/finora" element={<FinoraCaseStudy />} />
+      <Route path="/projects/kavaro-agency" element={<KavaroCaseStudy />} />
+    </Routes>
   )
 }

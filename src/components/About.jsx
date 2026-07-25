@@ -10,14 +10,14 @@ export default function About() {
 
       <div className="about-grid">
         <p className="about-copy">
-          I'm a product builder and founder focused on creating AI-powered
-          solutions that solve real-world problems. I combine software
-          engineering and product design to turn ideas into functional,
-          user-centered digital products — from designing the experience to
-          building the systems behind it.
+          I'm a product builder and software engineer focused on creating
+          AI-powered solutions that solve real-world problems. With a
+          foundation in UI/UX design, I approach software development by
+          understanding users, designing thoughtful experiences, and building
+          reliable systems.
           <br />
           <br />
-          Currently building{' '}
+          Currently, I'm building{' '}
           <a
             href="https://github.com/caroline568/finora-financial-coach"
             target="_blank"
@@ -35,8 +35,7 @@ export default function About() {
           >
             Kavaro Agency
           </a>
-          , where I build modern websites, web applications, and digital
-          solutions.
+          , where I create digital products for businesses and organizations.
         </p>
 
         <Log />

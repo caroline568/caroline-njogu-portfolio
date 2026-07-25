@@ -3,11 +3,23 @@ import ProjectCard from './ProjectCard.jsx'
 const projects = [
   {
     index: '01',
+    flagship: true,
     name: 'Finora',
-    tagline: 'AI financial coach for everyday Kenyans',
+    tagline: 'AI Financial Coach',
     description:
-      'A personal finance platform that helps informal workers, salaried employees, and students budget, save toward goals, manage debt, and get personalized financial guidance from an AI coach that speaks their financial language.',
-    stack: ['React', 'TypeScript', 'TanStack Start', 'Supabase', 'Tailwind CSS'],
+      'An AI-powered financial coach designed for everyday Kenyans, helping users budget, save toward goals, track spending, manage debt, and make better financial decisions.',
+    problem:
+      'Many people struggle with managing money because financial tools are often complicated or disconnected from everyday realities.',
+    image: '/projects/finora-promo.png',
+    caseStudy: '/projects/finora',
+    role: [
+      'Product strategy',
+      'UX design',
+      'Frontend engineering',
+      'AI integration',
+      'Feature development',
+    ],
+    stack: ['React', 'TypeScript', 'Supabase', 'Tailwind CSS', 'AI-powered guidance'],
     links: [
       { label: 'Repository', href: 'https://github.com/caroline568/finora-financial-coach' },
     ],
@@ -15,18 +27,34 @@ const projects = [
   {
     index: '02',
     name: 'Kavaro Agency',
-    tagline: 'Digital product studio, founded and led by Caroline',
+    tagline: 'Digital Product Studio',
     description:
-      'A remote design and engineering studio building websites, web apps, and AI-powered tools for clinics, startups, and small businesses. Leads product strategy, design, and delivery end to end.',
+      'Kavaro Agency is a digital product studio founded by Caroline, combining software engineering, AI, and product design to build modern websites, web applications, and digital solutions.',
+    image: '/projects/kavaro-logo.png',
+    role: [
+      'Founder & Software Engineer',
+      'Product strategy',
+      'UI/UX design',
+      'Frontend development',
+      'Client-focused solutions',
+    ],
+    caseStudy: '/projects/kavaro-agency',
     stack: ['React', 'Node.js', 'TypeScript', 'Vercel'],
     links: [{ label: 'Live site', href: 'https://kavaroagency.com' }],
   },
   {
     index: '03',
     name: 'Inventory Management System',
-    tagline: 'A REST API for tracking stock, built from scratch',
+    tagline: 'REST API & Backend Architecture',
     description:
-      'A Flask REST API and CLI for managing inventory — built as a Moringa School summative lab, with a clean commit history, tests covering the CLI and API, and handling for edge cases beyond the happy path.',
+      'A Flask REST API and CLI for managing inventory — built as a Moringa School summative lab, with a clean commit history and tests covering both the CLI and API.',
+    role: [
+      'REST API development',
+      'Database management',
+      'Testing',
+      'Error handling',
+      'Backend architecture',
+    ],
     stack: ['Python', 'Flask', 'SQLAlchemy'],
     links: [
       {
@@ -38,13 +66,14 @@ const projects = [
   {
     index: '04',
     name: 'Wordly Dictionary',
-    tagline: 'Look up words, keep the ones worth keeping',
+    tagline: 'Word Lookup, Search & Save',
     description:
       'A dark-themed dictionary app for searching word definitions, saving favorites, and revisiting recent searches — built for quick, distraction-free lookups.',
+    role: ['React development', 'API & data handling', 'User experience', 'Search functionality'],
     stack: ['JavaScript', 'React'],
     links: [
       { label: 'Live demo', href: 'https://wordly-dictionary-ten.vercel.app/' },
-      { label: 'Repository', href: 'https://github.com/caroline568/lab-wordly-dictionary' },
+      { label: 'Repository', href: 'https://github.com/caroline568/wordly-vocabulary-app' },
     ],
   },
 ]

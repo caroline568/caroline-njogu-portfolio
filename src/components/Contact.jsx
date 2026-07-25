@@ -2,13 +2,19 @@ export default function Contact() {
   return (
     <section id="contact" className="contact">
       <div className="section-head">
-        <span className="section-eyebrow">04 / Contact</span>
+        <span className="section-eyebrow">05 / Contact</span>
         <h2 className="section-title">
           Building something? Let's talk.
         </h2>
       </div>
 
       <div className="contact-row">
+        <a
+          className="contact-link"
+          href="mailto:njogucaroline91@gmail.com"
+        >
+          Email ↗
+        </a>
         <a
           className="contact-link"
           href="https://www.linkedin.com/in/carolinenjogu"
@@ -38,7 +44,7 @@ export default function Contact() {
       <footer className="footer">
         <p>Caroline Njogu — Nairobi, Kenya</p>
         <p className="footer-log">
-          <span className="hero-log-hash">$</span> still learning. still building.
+          <span className="hero-log-hash">$</span> building in public.
         </p>
       </footer>
     </section>

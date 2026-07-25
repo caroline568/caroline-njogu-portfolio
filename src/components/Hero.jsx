@@ -10,16 +10,17 @@ export default function Hero() {
         digital products, <span className="hero-title-accent">end to end.</span>
       </h1>
       <p className="hero-sub">
-        I take products from problem to shipped code — discovery, design,
-        development, deployment. Currently building{' '}
+        I take products from problem to shipped code — combining software
+        engineering, product thinking, and design to build AI-powered
+        solutions that solve real-world problems. Currently building{' '}
         <a href="#projects" className="inline-link">
           Finora
         </a>
-        , an AI-powered financial coach, and leading{' '}
+        , an AI-powered financial coach for everyday Kenyans, and leading{' '}
         <a href="#projects" className="inline-link">
           Kavaro Agency
         </a>
-        .
+        , a digital product studio.
       </p>
       <div className="hero-actions">
         <a href="#projects" className="btn btn-primary">
