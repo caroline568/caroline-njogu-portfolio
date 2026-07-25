@@ -82,7 +82,7 @@ export default function Projects() {
   return (
     <section id="projects" className="projects">
       <div className="section-head">
-        <span className="section-eyebrow">02 / Projects</span>
+        <span className="section-eyebrow">01 / Projects</span>
         <h2 className="section-title">Things I've shipped and things I'm still shipping.</h2>
       </div>
 

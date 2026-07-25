@@ -1,6 +1,7 @@
 export default function Hero() {
   return (
     <section id="top" className="hero">
+      <img src="/caroline.png" alt="Caroline Njogu" className="hero-avatar" />
       <p className="hero-eyebrow">
         <span className="dot" /> Nairobi, Kenya — Product Engineer &amp; Founder
       </p>

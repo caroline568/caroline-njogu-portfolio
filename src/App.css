@@ -203,6 +203,16 @@
   padding: 96px 24px 88px;
 }
 
+.hero-avatar {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid var(--amber-dim);
+  margin-bottom: 22px;
+  display: block;
+}
+
 .hero-eyebrow {
   display: inline-flex;
   align-items: center;
