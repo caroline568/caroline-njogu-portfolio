@@ -203,14 +203,41 @@
   padding: 96px 24px 88px;
 }
 
-.hero-avatar {
-  width: 64px;
-  height: 64px;
-  border-radius: 50%;
-  object-fit: cover;
-  border: 2px solid var(--amber-dim);
-  margin-bottom: 22px;
+.hero-grid {
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  gap: 56px;
+  align-items: center;
+}
+
+.hero-photo-wrap {
+  justify-self: end;
+  width: min(280px, 100%);
+  border-radius: 20px;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  background: var(--bg-raised);
+}
+
+.hero-photo {
   display: block;
+  width: 100%;
+  height: 100%;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+}
+
+@media (max-width: 840px) {
+  .hero-grid {
+    grid-template-columns: 1fr;
+    gap: 36px;
+  }
+
+  .hero-photo-wrap {
+    justify-self: start;
+    width: 160px;
+    order: -1;
+  }
 }
 
 .hero-eyebrow {
