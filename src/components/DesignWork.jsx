@@ -19,6 +19,24 @@ const designProjects = [
       },
     ],
   },
+  {
+    name: 'S Mart',
+    tagline: 'UX Case Study',
+    description:
+      'A grocery shopping and delivery app for Kenyan shoppers, with local payment options and live delivery tracking.',
+    image: '/projects/smart-mart/products.png',
+    caseStudy: '/projects/smart-mart',
+    links: [
+      {
+        label: 'Figma design',
+        href: 'https://www.figma.com/design/2DaNeg6c0ujjkAvPKUCtOt/Smart-App',
+      },
+      {
+        label: 'Prototype',
+        href: 'https://www.figma.com/proto/2DaNeg6c0ujjkAvPKUCtOt/Smart-App?node-id=53-83',
+      },
+    ],
+  },
 ]
 
 export default function DesignWork() {
