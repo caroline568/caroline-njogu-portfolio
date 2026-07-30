@@ -419,17 +419,22 @@
 }
 
 .design-card-image-wrap {
-  height: 220px;
+  height: 320px;
   background: #f4f5f8;
   border-bottom: 1px solid var(--line);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 18px;
+  box-sizing: border-box;
 }
 
 .design-card-image {
   display: block;
-  width: 100%;
+  width: auto;
   height: 100%;
-  object-fit: cover;
-  object-position: 50% 12%;
+  max-width: 100%;
+  object-fit: contain;
 }
 
 .design-card-body {
