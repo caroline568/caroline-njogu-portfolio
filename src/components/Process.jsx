@@ -25,7 +25,7 @@ export default function Process() {
   return (
     <section id="process" className="process">
       <div className="section-head">
-        <span className="section-eyebrow">03 / Process</span>
+        <span className="section-eyebrow">04 / Process</span>
         <h2 className="section-title">How I build.</h2>
       </div>
 

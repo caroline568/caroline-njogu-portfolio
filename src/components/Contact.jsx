@@ -2,7 +2,7 @@ export default function Contact() {
   return (
     <section id="contact" className="contact">
       <div className="section-head">
-        <span className="section-eyebrow">05 / Contact</span>
+        <span className="section-eyebrow">06 / Contact</span>
         <h2 className="section-title">
           Building something? Let's talk.
         </h2>

@@ -6,6 +6,7 @@ export default function Nav() {
       </a>
       <nav className="nav-links">
         <a href="#projects">Projects</a>
+        <a href="#design-work">Design</a>
         <a href="#about">About</a>
         <a href="#process">Process</a>
         <a href="#skills">Skills</a>

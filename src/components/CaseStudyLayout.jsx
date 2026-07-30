@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom'
 
-export default function CaseStudyLayout({ title, subtitle, image, meta, sections }) {
+export default function CaseStudyLayout({ title, subtitle, image, meta, gallery, sections }) {
   return (
     <div className="page case-study">
       <header className="cs-nav">
@@ -49,6 +49,17 @@ export default function CaseStudyLayout({ title, subtitle, image, meta, sections
           </section>
         ))}
       </div>
+
+      {gallery && gallery.length > 0 && (
+        <div className="cs-gallery">
+          {gallery.map((item) => (
+            <figure className="cs-gallery-item" key={item.src}>
+              <img src={item.src} alt={item.alt} />
+              <figcaption>{item.alt}</figcaption>
+            </figure>
+          ))}
+        </div>
+      )}
 
       <footer className="footer cs-footer">
         <p>Caroline Njogu — Nairobi, Kenya</p>

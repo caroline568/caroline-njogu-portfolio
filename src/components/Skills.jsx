@@ -43,7 +43,7 @@ export default function Skills() {
   return (
     <section id="skills" className="skills">
       <div className="section-head">
-        <span className="section-eyebrow">04 / Skills</span>
+        <span className="section-eyebrow">05 / Skills</span>
         <h2 className="section-title">Design and engineering, in one toolkit.</h2>
       </div>
 

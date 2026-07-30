@@ -130,6 +130,36 @@
   line-height: 1.8;
 }
 
+.cs-gallery {
+  margin-top: 56px;
+  padding-top: 32px;
+  border-top: 1px solid var(--line);
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 20px;
+}
+
+.cs-gallery-item {
+  margin: 0;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  overflow: hidden;
+  background: #f4f5f8;
+}
+
+.cs-gallery-item img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.cs-gallery-item figcaption {
+  padding: 10px 12px;
+  font-size: 12px;
+  color: var(--text-dim);
+  background: var(--bg-raised);
+}
+
 .cs-footer {
   margin-top: 80px;
   padding-top: 24px;
@@ -360,6 +390,76 @@
   font-weight: 600;
   max-width: 24ch;
   line-height: 1.25;
+}
+
+/* ---------- Design Work ---------- */
+.design-work {
+  padding: 8px 0 96px;
+}
+
+.design-list {
+  max-width: var(--max-w);
+  margin: 0 auto;
+  padding: 0 24px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 24px;
+}
+
+.design-card {
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  overflow: hidden;
+  background: var(--bg-raised);
+  transition: background 0.2s ease;
+}
+
+.design-card:hover {
+  background: var(--bg-raised-2);
+}
+
+.design-card-image-wrap {
+  height: 220px;
+  background: #f4f5f8;
+  border-bottom: 1px solid var(--line);
+}
+
+.design-card-image {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top;
+}
+
+.design-card-body {
+  padding: 22px 24px 26px;
+}
+
+.design-card-tagline {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  color: var(--amber);
+}
+
+.design-card-name {
+  margin-top: 8px;
+  font-size: 19px;
+  font-weight: 600;
+}
+
+.design-card-desc {
+  margin-top: 10px;
+  font-size: 14px;
+  line-height: 1.6;
+  color: var(--text-dim);
+}
+
+.design-card-links {
+  margin-top: 18px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px 20px;
 }
 
 /* ---------- Projects ---------- */
