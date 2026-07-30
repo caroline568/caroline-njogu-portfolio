@@ -6,7 +6,7 @@ const designProjects = [
     tagline: 'UX Case Study',
     description:
       'A mobile app consolidating wedding budget, guests, tasks, and inspiration into one dashboard-first experience.',
-    image: '/projects/wedding-planner/dashboard.png',
+    image: '/projects/wedding-planner/inspiration.png',
     caseStudy: '/projects/wedding-planner-app',
     links: [
       {
