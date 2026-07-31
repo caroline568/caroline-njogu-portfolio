@@ -391,7 +391,14 @@
   font-family: var(--font-mono);
   font-size: 13px;
   color: var(--text-dim);
+  margin-bottom: 10px;
+}
+
+.hero-status {
+  font-size: 13px;
+  color: var(--text-faint);
   margin-bottom: 28px;
+  padding-left: 14px;
 }
 
 .dot {

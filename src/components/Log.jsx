@@ -13,7 +13,7 @@ const entries = [
   },
   {
     hash: 'e01b73f',
-    when: 'Feb 2026 →',
+    when: 'Feb – Aug 2026',
     title: 'Software Engineering, Moringa School',
     detail: 'JavaScript, Python, React, Next.js, backend systems, databases, APIs.',
   },
