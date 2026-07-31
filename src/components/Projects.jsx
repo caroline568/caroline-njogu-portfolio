@@ -1,4 +1,5 @@
 import ProjectCard from './ProjectCard.jsx'
+import Reveal from './Reveal.jsx'
 
 const projects = [
   {
@@ -81,14 +82,16 @@ const projects = [
 export default function Projects() {
   return (
     <section id="projects" className="projects">
-      <div className="section-head">
+      <Reveal className="section-head">
         <span className="section-eyebrow">01 / Projects</span>
         <h2 className="section-title">Things I've shipped and things I'm still shipping.</h2>
-      </div>
+      </Reveal>
 
       <div className="project-list">
-        {projects.map((project) => (
-          <ProjectCard project={project} key={project.name} />
+        {projects.map((project, i) => (
+          <Reveal key={project.name} delay={i * 80}>
+            <ProjectCard project={project} />
+          </Reveal>
         ))}
       </div>
     </section>

@@ -1,14 +1,20 @@
+import Reveal from './Reveal.jsx'
+
 export default function Contact() {
   return (
     <section id="contact" className="contact">
-      <div className="section-head">
-        <span className="section-eyebrow">06 / Contact</span>
+      <Reveal className="section-head">
+        <span className="section-eyebrow">07 / Contact</span>
         <h2 className="section-title">
           Building something? Let's talk.
         </h2>
-      </div>
+        <p className="contact-intro">
+          Whether it's a product idea, a role, or a project you need shipped —
+          I'd like to hear about it. Usually reply within a day.
+        </p>
+      </Reveal>
 
-      <div className="contact-row">
+      <Reveal delay={100} className="contact-row">
         <a
           className="contact-link"
           href="mailto:njogucaroline91@gmail.com"
@@ -39,7 +45,7 @@ export default function Contact() {
         >
           Kavaro Agency ↗
         </a>
-      </div>
+      </Reveal>
 
       <footer className="footer">
         <p>Caroline Njogu — Nairobi, Kenya</p>

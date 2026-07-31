@@ -165,6 +165,47 @@
   padding-top: 24px;
 }
 
+/* ---------- Motion ---------- */
+.reveal {
+  opacity: 0;
+  transform: translateY(18px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.reveal-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}
+
+.project-card,
+.design-card,
+.process-step,
+.chip {
+  transition: background 0.2s ease, transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.project-card:hover,
+.design-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 28px -16px rgba(0, 0, 0, 0.5);
+}
+
+.process-step:hover {
+  transform: translateY(-2px);
+}
+
+.chip:hover {
+  transform: translateY(-1px);
+}
+
 /* ---------- Nav ---------- */
 .nav {
   max-width: var(--max-w);
@@ -201,10 +242,25 @@
 
 .nav-links a {
   transition: color 0.15s ease;
+  position: relative;
 }
 
 .nav-links a:hover {
   color: var(--text);
+}
+
+.nav-link-active {
+  color: var(--amber) !important;
+}
+
+.nav-link-active::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -6px;
+  height: 1px;
+  background: var(--amber);
 }
 
 .nav-gh {
@@ -222,8 +278,66 @@
   color: var(--amber);
 }
 
+.nav-toggle {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+  background: none;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  width: 38px;
+  height: 34px;
+  cursor: pointer;
+  align-items: center;
+}
+
+.nav-toggle span {
+  display: block;
+  width: 16px;
+  height: 1.5px;
+  background: var(--text);
+}
+
+.nav-mobile-menu {
+  position: absolute;
+  top: 100%;
+  left: 24px;
+  right: 24px;
+  margin-top: 12px;
+  background: var(--bg-raised);
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  z-index: 20;
+}
+
+.nav-mobile-menu a {
+  padding: 12px 10px;
+  font-size: 15px;
+  color: var(--text);
+  border-radius: 8px;
+}
+
+.nav-mobile-menu a:hover {
+  background: var(--bg-raised-2);
+}
+
 @media (max-width: 720px) {
-  .nav-links { display: none; }
+  .nav-links,
+  .nav-gh {
+    display: none;
+  }
+
+  .nav-toggle {
+    display: flex;
+  }
+
+  .nav {
+    position: relative;
+  }
 }
 
 /* ---------- Hero ---------- */
@@ -407,7 +521,7 @@
 }
 
 .design-card {
-  border: 1px solid var(--line);
+  border: 1px solid rgba(110, 231, 216, 0.18);
   border-radius: 14px;
   overflow: hidden;
   background: var(--bg-raised);
@@ -427,6 +541,21 @@
   justify-content: center;
   padding: 18px;
   box-sizing: border-box;
+  position: relative;
+}
+
+.design-card-badge {
+  position: absolute;
+  top: 14px;
+  left: 14px;
+  font-family: var(--font-mono);
+  font-size: 10px;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: #17110a;
+  background: var(--teal);
+  padding: 4px 10px;
+  border-radius: 100px;
 }
 
 .design-card-image {
@@ -820,59 +949,169 @@
   }
 }
 
+/* ---------- Build in Public ---------- */
+.build-in-public {
+  padding: 40px 0 100px;
+  border-top: 1px solid var(--line);
+}
+
+.bip-list {
+  max-width: var(--max-w);
+  margin: 0 auto;
+  padding: 0 24px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+}
+
+.bip-post {
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  padding: 24px 22px;
+  background: var(--bg-raised);
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.bip-post:hover {
+  background: var(--bg-raised-2);
+  transform: translateY(-2px);
+}
+
+.bip-tag {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  color: var(--teal);
+}
+
+.bip-title {
+  margin-top: 10px;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.bip-body {
+  margin-top: 10px;
+  font-size: 13.5px;
+  line-height: 1.65;
+  color: var(--text-dim);
+}
+
+.bip-linkedin {
+  display: block;
+  max-width: var(--max-w);
+  margin: 32px auto 0;
+  padding: 0 24px;
+  font-size: 14px;
+  color: var(--amber);
+}
+
+.bip-linkedin:hover {
+  color: #ffc474;
+}
+
 /* ---------- Skills ---------- */
 .skills {
   padding: 40px 0 100px;
   border-top: 1px solid var(--line);
 }
 
-.skills-grid {
+.skills-flow {
   max-width: var(--max-w);
   margin: 0 auto;
   padding: 0 24px;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 32px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  gap: 4px 0;
+}
+
+.skills-flow-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 4px;
+}
+
+.skills-stage {
+  width: 216px;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  padding: 20px 18px;
+  background: var(--bg-raised);
+}
+
+.skills-stage-index {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  color: var(--teal);
+}
+
+.skills-arrow {
+  color: var(--text-faint);
+  font-size: 18px;
+  padding: 34px 10px 0;
+  flex-shrink: 0;
 }
 
 .skills-label {
   font-family: var(--font-mono);
   font-size: 12px;
   color: var(--text-faint);
-  margin-bottom: 16px;
+  margin: 10px 0 14px;
 }
 
 .skills-chips {
   display: flex;
   flex-wrap: wrap;
-  gap: 10px;
+  gap: 8px;
+}
+
+@media (max-width: 1100px) {
+  .skills-flow {
+    flex-direction: column;
+  }
+
+  .skills-flow-item {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .skills-stage {
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .skills-arrow {
+    transform: rotate(90deg);
+    padding: 4px 0 4px 18px;
+  }
 }
 
 .chip {
   font-size: 13px;
   color: var(--text);
-  background: var(--bg-raised);
+  background: var(--bg-raised-2);
   border: 1px solid var(--line);
-  padding: 8px 14px;
+  padding: 7px 12px;
   border-radius: 8px;
-  transition: border-color 0.15s ease;
+  transition: border-color 0.15s ease, transform 0.2s ease;
 }
 
 .chip:hover {
   border-color: var(--amber-dim);
 }
 
-@media (max-width: 720px) {
-  .skills-grid {
-    grid-template-columns: 1fr;
-    gap: 36px;
-  }
-}
-
 /* ---------- Contact ---------- */
 .contact {
   padding: 96px 0 40px;
   border-top: 1px solid var(--line);
+}
+
+.contact-intro {
+  margin-top: 16px;
+  font-size: 16px;
+  color: var(--text-dim);
+  max-width: 46ch;
+  line-height: 1.6;
 }
 
 .contact-row {

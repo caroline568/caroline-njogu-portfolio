@@ -1,15 +1,16 @@
 import Log from './Log.jsx'
+import Reveal from './Reveal.jsx'
 
 export default function About() {
   return (
     <section id="about" className="about">
-      <div className="section-head">
+      <Reveal className="section-head">
         <span className="section-eyebrow">03 / About</span>
         <h2 className="section-title">Idea to shipped product — end to end.</h2>
-      </div>
+      </Reveal>
 
       <div className="about-grid">
-        <p className="about-copy">
+        <Reveal as="p" className="about-copy">
           I'm a product builder and software engineer focused on creating
           AI-powered solutions that solve real-world problems. With a
           foundation in UI/UX design, I approach software development by
@@ -36,9 +37,11 @@ export default function About() {
             Kavaro Agency
           </a>
           , where I create digital products for businesses and organizations.
-        </p>
+        </Reveal>
 
-        <Log />
+        <Reveal delay={120}>
+          <Log />
+        </Reveal>
       </div>
     </section>
   )

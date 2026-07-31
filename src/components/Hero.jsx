@@ -1,8 +1,10 @@
+import Reveal from './Reveal.jsx'
+
 export default function Hero() {
   return (
     <section id="top" className="hero">
       <div className="hero-grid">
-        <div className="hero-content">
+        <Reveal className="hero-content">
           <p className="hero-eyebrow">
             <span className="dot" /> Nairobi, Kenya — Product Engineer &amp; Founder
           </p>
@@ -36,11 +38,11 @@ export default function Hero() {
             <span className="hero-log-hash">$</span> status —{' '}
             <span className="hero-log-msg">building in public.</span>
           </p>
-        </div>
+        </Reveal>
 
-        <div className="hero-photo-wrap">
+        <Reveal delay={150} className="hero-photo-wrap">
           <img src="/caroline.png" alt="Caroline Njogu" className="hero-photo" />
-        </div>
+        </Reveal>
       </div>
     </section>
   )

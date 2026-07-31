@@ -1,63 +1,51 @@
-const groups = [
+import Reveal from './Reveal.jsx'
+
+const stages = [
   {
-    label: 'Engineering',
-    items: [
-      'JavaScript',
-      'TypeScript',
-      'Python',
-      'React',
-      'Next.js',
-      'Node.js',
-      'Express.js',
-      'Flask',
-      'REST APIs',
-      'SQL',
-      'PostgreSQL',
-      'Supabase',
-      'Git',
-    ],
+    label: 'Research & Design',
+    items: ['UI/UX Design', 'Figma', 'User Research', 'Wireframing', 'Prototyping', 'Design Systems'],
   },
   {
-    label: 'Design',
-    items: [
-      'UI/UX Design',
-      'Figma',
-      'User Research',
-      'Wireframing',
-      'Prototyping',
-      'Design Systems',
-    ],
+    label: 'Frontend',
+    items: ['React', 'Next.js', 'JavaScript', 'TypeScript'],
+  },
+  {
+    label: 'Backend',
+    items: ['Node.js', 'Express.js', 'Flask', 'Python', 'REST APIs', 'SQL', 'PostgreSQL', 'Supabase'],
   },
   {
     label: 'AI',
-    items: [
-      'Generative AI',
-      'Prompt Engineering',
-      'OpenAI API',
-      'AI Product Development',
-    ],
+    items: ['Generative AI', 'Prompt Engineering', 'OpenAI API', 'AI Product Development'],
+  },
+  {
+    label: 'Deployment',
+    items: ['Git', 'Vercel'],
   },
 ]
 
 export default function Skills() {
   return (
     <section id="skills" className="skills">
-      <div className="section-head">
+      <Reveal className="section-head">
         <span className="section-eyebrow">05 / Skills</span>
-        <h2 className="section-title">Design and engineering, in one toolkit.</h2>
-      </div>
+        <h2 className="section-title">One connected skillset, not three separate ones.</h2>
+      </Reveal>
 
-      <div className="skills-grid">
-        {groups.map((group) => (
-          <div className="skills-group" key={group.label}>
-            <p className="skills-label">{group.label}</p>
-            <div className="skills-chips">
-              {group.items.map((item) => (
-                <span className="chip" key={item}>
-                  {item}
-                </span>
-              ))}
-            </div>
+      <div className="skills-flow">
+        {stages.map((stage, i) => (
+          <div className="skills-flow-item" key={stage.label}>
+            <Reveal delay={i * 90} className="skills-stage">
+              <p className="skills-stage-index">{String(i + 1).padStart(2, '0')}</p>
+              <p className="skills-label">{stage.label}</p>
+              <div className="skills-chips">
+                {stage.items.map((item) => (
+                  <span className="chip" key={item}>
+                    {item}
+                  </span>
+                ))}
+              </div>
+            </Reveal>
+            {i < stages.length - 1 && <span className="skills-arrow">→</span>}
           </div>
         ))}
       </div>

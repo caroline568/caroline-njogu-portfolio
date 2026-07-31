@@ -1,3 +1,5 @@
+import Reveal from './Reveal.jsx'
+
 const steps = [
   {
     index: '01',
@@ -24,18 +26,20 @@ const steps = [
 export default function Process() {
   return (
     <section id="process" className="process">
-      <div className="section-head">
+      <Reveal className="section-head">
         <span className="section-eyebrow">04 / Process</span>
         <h2 className="section-title">How I build.</h2>
-      </div>
+      </Reveal>
 
       <div className="process-grid">
-        {steps.map((step) => (
-          <div className="process-step" key={step.index}>
-            <span className="process-index">{step.index}</span>
-            <p className="process-title">{step.title}</p>
-            <p className="process-detail">{step.detail}</p>
-          </div>
+        {steps.map((step, i) => (
+          <Reveal key={step.index} delay={i * 90}>
+            <div className="process-step">
+              <span className="process-index">{step.index}</span>
+              <p className="process-title">{step.title}</p>
+              <p className="process-detail">{step.detail}</p>
+            </div>
+          </Reveal>
         ))}
       </div>
     </section>

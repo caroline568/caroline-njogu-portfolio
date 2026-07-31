@@ -5,6 +5,7 @@ import DesignWork from '../components/DesignWork.jsx'
 import About from '../components/About.jsx'
 import Process from '../components/Process.jsx'
 import Skills from '../components/Skills.jsx'
+import BuildInPublic from '../components/BuildInPublic.jsx'
 import Contact from '../components/Contact.jsx'
 
 export default function Home() {
@@ -18,6 +19,7 @@ export default function Home() {
         <About />
         <Process />
         <Skills />
+        <BuildInPublic />
       </main>
       <Contact />
     </div>
