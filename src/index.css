@@ -1,20 +1,31 @@
 :root {
-  /* Color */
-  --bg: #0a0d16;
-  --bg-raised: #10141f;
-  --bg-raised-2: #151a29;
-  --line: #232a3d;
-  --text: #eef0f7;
-  --text-dim: #8993ab;
-  --text-faint: #565f78;
-  --amber: #ffb454;
-  --amber-dim: #8a6a3a;
-  --teal: #6ee7d8;
+  /* ---------- Color ----------
+     A single refined neutral scale, near-black, with one signature
+     accent (a muted gold) used deliberately for emphasis, links, and
+     primary actions only. Borders are hairline whites layered over
+     the base rather than flat grays, so depth reads as light. */
+  --bg: #09090b;
+  --bg-raised: #131316;
+  --bg-raised-2: #1a1a1f;
+  --line: rgba(255, 255, 255, 0.08);
+  --line-strong: rgba(255, 255, 255, 0.14);
+  --text: #f2f2f4;
+  --text-dim: #9a9aa2;
+  --text-faint: #5c5c66;
 
-  /* Type */
+  --accent: #f2a93c;
+  --accent-hover: #f7ba5c;
+  --accent-ink: #1c1305;
+  --accent-dim: #7a5a24;
+  --accent-wash: rgba(242, 169, 60, 0.1);
+
+  /* ---------- Type ---------- */
   --font-display: 'Space Grotesk', sans-serif;
   --font-body: 'Inter', sans-serif;
   --font-mono: 'IBM Plex Mono', monospace;
+
+  /* ---------- Motion ---------- */
+  --ease: cubic-bezier(0.16, 1, 0.3, 1);
 
   --max-w: 1120px;
 }
@@ -33,24 +44,25 @@ body {
   color: var(--text);
   font-family: var(--font-body);
   -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
   overflow-x: hidden;
 }
 
+/* A single, quiet wash — not a multi-color glow. Barely there. */
 body::before {
   content: '';
   position: fixed;
   inset: 0;
   z-index: 0;
   pointer-events: none;
-  background:
-    radial-gradient(680px circle at 12% -10%, rgba(255, 180, 84, 0.10), transparent 60%),
-    radial-gradient(560px circle at 100% 20%, rgba(110, 231, 216, 0.06), transparent 55%);
+  background: radial-gradient(900px circle at 50% -12%, rgba(242, 169, 60, 0.05), transparent 60%);
 }
 
 h1, h2, h3, h4 {
   font-family: var(--font-display);
   margin: 0;
-  letter-spacing: -0.01em;
+  letter-spacing: -0.02em;
+  font-weight: 600;
 }
 
 p {
@@ -67,8 +79,8 @@ button {
 }
 
 ::selection {
-  background: var(--amber);
-  color: #17110a;
+  background: var(--accent);
+  color: var(--accent-ink);
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -81,7 +93,7 @@ button {
 }
 
 :focus-visible {
-  outline: 2px solid var(--amber);
+  outline: 2px solid var(--accent);
   outline-offset: 3px;
   border-radius: 2px;
 }
