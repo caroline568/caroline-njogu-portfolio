@@ -1,33 +1,37 @@
 :root {
   /* ---------- Color ----------
-     A single refined neutral scale, near-black, with one signature
-     accent (a muted gold) used deliberately for emphasis, links, and
-     primary actions only. Borders are hairline whites layered over
-     the base rather than flat grays, so depth reads as light. */
-  --bg: #09090b;
-  --bg-raised: #131316;
-  --bg-raised-2: #1a1a1f;
-  --line: rgba(255, 255, 255, 0.08);
-  --line-strong: rgba(255, 255, 255, 0.14);
-  --text: #f2f2f4;
-  --text-dim: #9a9aa2;
-  --text-faint: #5c5c66;
+     A warm, near-black "desert at dusk" base with one signature
+     gradient — the "bloom" — used deliberately: hero type, glows,
+     primary actions. Everything else stays quiet so the bloom reads
+     as a signature, not decoration. */
+  --bg: #14100c;
+  --bg-raised: #1d1610;
+  --bg-raised-2: #251c14;
+  --line: rgba(255, 236, 214, 0.09);
+  --line-strong: rgba(255, 236, 214, 0.17);
+  --text: #faf1e6;
+  --text-dim: #c7b6a4;
+  --text-faint: #8a7863;
 
-  --accent: #f2a93c;
-  --accent-hover: #f7ba5c;
-  --accent-ink: #1c1305;
-  --accent-dim: #7a5a24;
-  --accent-wash: rgba(242, 169, 60, 0.1);
+  --bloom-1: #ffc15e;
+  --bloom-2: #ff6b4a;
+  --bloom-3: #ff3d77;
+  --gradient-bloom: linear-gradient(120deg, var(--bloom-1) 0%, var(--bloom-2) 48%, var(--bloom-3) 100%);
+
+  --accent: #ff7a52;
+  --accent-hover: #ff9670;
+  --accent-ink: #200d06;
+  --accent-wash: rgba(255, 122, 82, 0.14);
 
   /* ---------- Type ---------- */
-  --font-display: 'Space Grotesk', sans-serif;
+  --font-display: 'Fraunces', serif;
   --font-body: 'Inter', sans-serif;
   --font-mono: 'IBM Plex Mono', monospace;
 
   /* ---------- Motion ---------- */
   --ease: cubic-bezier(0.16, 1, 0.3, 1);
 
-  --max-w: 1120px;
+  --max-w: 1160px;
 }
 
 * {
@@ -46,22 +50,44 @@ body {
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
   overflow-x: hidden;
+  position: relative;
 }
 
-/* A single, quiet wash — not a multi-color glow. Barely there. */
+/* Ambient, slow-drifting warmth — the desert light. One gradient,
+   never sharp, never distracting from content. */
 body::before {
+  content: '';
+  position: fixed;
+  inset: -10%;
+  z-index: 0;
+  pointer-events: none;
+  background:
+    radial-gradient(680px circle at 14% -6%, rgba(255, 193, 94, 0.1), transparent 60%),
+    radial-gradient(760px circle at 92% 18%, rgba(255, 61, 119, 0.08), transparent 62%),
+    radial-gradient(900px circle at 50% 115%, rgba(255, 107, 74, 0.07), transparent 60%);
+  animation: driftLight 26s ease-in-out infinite alternate;
+}
+
+@keyframes driftLight {
+  0% { transform: translate3d(0, 0, 0) scale(1); }
+  100% { transform: translate3d(-1.5%, 1.5%, 0) scale(1.04); }
+}
+
+/* A whisper of grain so the warm dark reads as material, not flat paint. */
+body::after {
   content: '';
   position: fixed;
   inset: 0;
   z-index: 0;
   pointer-events: none;
-  background: radial-gradient(900px circle at 50% -12%, rgba(242, 169, 60, 0.05), transparent 60%);
+  opacity: 0.035;
+  mix-blend-mode: overlay;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
 }
 
 h1, h2, h3, h4 {
   font-family: var(--font-display);
   margin: 0;
-  letter-spacing: -0.02em;
   font-weight: 600;
 }
 
@@ -79,8 +105,8 @@ button {
 }
 
 ::selection {
-  background: var(--accent);
-  color: var(--accent-ink);
+  background: var(--bloom-2);
+  color: #fff6ee;
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -93,7 +119,7 @@ button {
 }
 
 :focus-visible {
-  outline: 2px solid var(--accent);
+  outline: 2px solid var(--bloom-2);
   outline-offset: 3px;
   border-radius: 2px;
 }
