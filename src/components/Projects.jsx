@@ -31,7 +31,7 @@ const projects = [
     tagline: 'Digital Product Studio',
     description:
       'Kavaro Agency is a digital product studio founded by Caroline, combining software engineering, AI, and product design to build modern websites, web applications, and digital solutions.',
-    image: '/projects/kavaro-logo.png',
+    image: '/projects/kavaro-hero.png',
     role: [
       'Founder & Software Engineer',
       'Product strategy',
