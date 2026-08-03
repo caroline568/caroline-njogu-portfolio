@@ -700,7 +700,7 @@
   align-self: flex-start;
   width: min(560px, 100%);
   height: 380px;
-  border-radius: 4% 34% 4% 34% / 34% 4% 34% 4%;
+  border-radius: 63% 37% 54% 46% / 55% 48% 52% 45%;
   overflow: hidden;
   border: 1px solid var(--line);
   background: linear-gradient(160deg, var(--bg-raised-2), var(--bg-raised));
@@ -725,7 +725,7 @@
 }
 
 .project-image-wrap:hover {
-  border-radius: 34% 4% 34% 4% / 4% 34% 4% 34%;
+  border-radius: 46% 54% 63% 37% / 48% 55% 45% 52%;
   transform: scale(1.012) rotate(-0.6deg);
 }
 
@@ -891,7 +891,7 @@
   height: 340px;
   background: #f4f0ea;
   border: 1px solid var(--line);
-  border-radius: 28px 28px 6px 28px;
+  border-radius: 28px 28px 14px 28px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -902,7 +902,7 @@
 }
 
 .design-card:hover .design-card-image-wrap {
-  border-radius: 6px 28px 28px 28px;
+  border-radius: 14px 28px 28px 28px;
   transform: translateY(-3px);
 }
 
