@@ -19,7 +19,7 @@ const stages = [
   },
   {
     label: 'Deployment',
-    items: ['Git', 'Vercel'],
+    items: ['Git', 'Vercel', 'Cloudflare'],
   },
 ]
 

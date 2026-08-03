@@ -703,8 +703,20 @@
   border-radius: 4% 34% 4% 34% / 34% 4% 34% 4%;
   overflow: hidden;
   border: 1px solid var(--line);
-  background: #f4f0ea;
+  background: linear-gradient(160deg, var(--bg-raised-2), var(--bg-raised));
   box-shadow: 0 46px 90px -46px rgba(0, 0, 0, 0.7), 0 26px 60px -30px var(--accent-wash);
+  position: relative;
+}
+
+/* A soft inner vignette so the image's own background blends into the
+   blob edge instead of ending in a hard rectangle. */
+.project-image-wrap::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  box-shadow: inset 0 0 60px 20px var(--bg-raised);
+  pointer-events: none;
+  opacity: 0.5;
 }
 
 .project-list .project-card:nth-child(even) .project-image-wrap,
@@ -721,9 +733,7 @@
   display: block;
   width: 100%;
   height: 100%;
-  object-fit: contain;
-  padding: 26px;
-  box-sizing: border-box;
+  object-fit: cover;
 }
 
 .project-link-case-study {
@@ -1085,14 +1095,37 @@
   position: absolute;
   top: 0;
   left: 0;
-  width: 30px;
+  right: 0;
   height: 2px;
-  background: var(--gradient-bloom);
   border-radius: 2px;
+  background-image: repeating-linear-gradient(90deg, var(--bloom-2) 0 6px, transparent 6px 14px);
+  animation: flowMove 1.4s linear infinite;
+  opacity: 0.85;
+}
+
+.process-step:not(:last-child)::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: -44px;
+  width: 44px;
+  height: 2px;
+  background-image: repeating-linear-gradient(90deg, var(--bloom-1) 0 6px, transparent 6px 14px);
+  animation: flowMove 1.4s linear infinite;
+  opacity: 0.5;
+}
+
+@keyframes flowMove {
+  from { background-position: 0 0; }
+  to { background-position: -14px 0; }
 }
 
 .process-step:hover {
   transform: translateY(-3px);
+}
+
+.process-step:hover::before {
+  opacity: 1;
 }
 
 .process-index {
@@ -1130,6 +1163,10 @@
 @media (max-width: 800px) {
   .process-grid {
     grid-template-columns: 1fr 1fr;
+  }
+
+  .process-step:not(:last-child)::after {
+    display: none;
   }
 }
 
