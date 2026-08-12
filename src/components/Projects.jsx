@@ -77,6 +77,30 @@ const projects = [
       { label: 'Repository', href: 'https://github.com/caroline568/wordly-vocabulary-app' },
     ],
   },
+  {
+    index: '05',
+    name: 'Workout Tracker API',
+    tagline: 'Backend for Workouts & Exercises',
+    description:
+      'A backend API for logging workouts and exercises, with sets, reps, and duration tracked through a many-to-many exercise relationship — built as a Moringa School summative lab.',
+    role: ['REST API development', 'Database design', 'Serialization', 'Backend architecture'],
+    stack: ['Python', 'Flask', 'SQLAlchemy', 'Marshmallow'],
+    links: [
+      { label: 'Repository', href: 'https://github.com/caroline568/workout-tracker-api' },
+    ],
+  },
+  {
+    index: '06',
+    name: 'Mood Tracker',
+    tagline: 'Full-Stack Journaling App',
+    description:
+      'A full-stack mood tracker with session and JWT authentication, where each user only sees and manages their own mood entries — built as a Moringa School summative lab.',
+    role: ['Frontend development', 'Auth implementation', 'API design', 'Full-stack integration'],
+    stack: ['JavaScript', 'React', 'Flask', 'JWT'],
+    links: [
+      { label: 'Repository', href: 'https://github.com/caroline568/mood-tracker-app' },
+    ],
+  },
 ]
 
 export default function Projects() {

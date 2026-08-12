@@ -46,6 +46,23 @@ export default function CaseStudyLayout({ title, subtitle, image, meta, gallery,
                 ))}
               </ul>
             )}
+            {section.products && (
+              <div className="cs-products">
+                {section.products.map((p) => (
+                  <a
+                    key={p.name}
+                    href={p.href}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="cs-product-card"
+                  >
+                    <span className="cs-product-name">{p.name}</span>
+                    <span className="cs-product-desc">{p.desc}</span>
+                    <span className="cs-product-link">Live demo →</span>
+                  </a>
+                ))}
+              </div>
+            )}
           </section>
         ))}
       </div>

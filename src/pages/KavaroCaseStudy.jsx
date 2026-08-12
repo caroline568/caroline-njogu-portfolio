@@ -34,20 +34,41 @@ export default function KavaroCaseStudy() {
           ],
         },
         {
+          heading: 'Products shipped',
+          body: 'Real, live products built to prove out the studio\u2019s process — from first booking flow to AI-assisted support.',
+          products: [
+            {
+              name: 'MediFlow',
+              desc: 'Healthcare booking platform with a 24/7 AI patient assistant.',
+              href: 'https://healthbuddy-appointments.lovable.app',
+            },
+            {
+              name: 'Kavaro AI Support',
+              desc: 'Embeddable AI support widget trained on a business\u2019s own docs.',
+              href: 'https://kavaro-support-ai.lovable.app',
+            },
+            {
+              name: 'BookFlow',
+              desc: 'Booking & operations dashboard for Kenyan service businesses.',
+              href: 'https://my-biz-bookings.lovable.app',
+            },
+          ],
+        },
+        {
           heading: 'Development process',
-          body: 'Each project moves through discovery, design, and build phases, with the same person carrying context across all three — reducing the handoff loss that usually happens between separate designers and developers.',
+          body: 'Each project moves through discovery, design, and build phases, with Caroline carrying product context across all three as the team executes — reducing the handoff loss that usually happens between separate designers and developers.',
         },
         {
           heading: 'Challenges',
           list: [
-            'Balancing agency client work with building Finora in parallel',
-            'Scoping engagements clearly as a solo founder',
+            'Coordinating design and engineering decisions across a growing team',
+            'Scoping engagements clearly as the studio takes on its first clients',
             'Staying current across both design tooling and engineering stacks',
           ],
         },
         {
           heading: 'Lessons learned',
-          body: 'Owning a project end-to-end — from product strategy through shipped code — produces sharper decisions than handing pieces of it off. It also means design and engineering trade-offs get made by the same person who understands both sides, rather than negotiated between them.',
+          body: 'Owning a project end-to-end — from product strategy through shipped code — produces sharper decisions than handing pieces of it off between separate vendors. Bringing on a team meant translating that same ownership into shared context, not losing it.',
         },
       ]}
     />

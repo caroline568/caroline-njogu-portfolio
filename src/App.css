@@ -201,6 +201,51 @@
   line-height: 1.9;
 }
 
+.cs-products {
+  margin-top: 22px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 16px;
+}
+
+.cs-product-card {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  padding: 18px 20px;
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  text-decoration: none;
+  transition: border-color 0.2s ease, transform 0.2s ease;
+}
+
+.cs-product-card:hover {
+  border-color: var(--bloom-2);
+  transform: translateY(-2px);
+}
+
+.cs-product-name {
+  font-family: var(--font-display);
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--text);
+}
+
+.cs-product-desc {
+  font-size: 13px;
+  line-height: 1.6;
+  color: var(--text-dim);
+}
+
+.cs-product-link {
+  margin-top: 4px;
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 0.04em;
+  color: var(--bloom-2);
+  text-transform: uppercase;
+}
+
 .cs-gallery {
   margin-top: 72px;
   padding-top: 40px;
