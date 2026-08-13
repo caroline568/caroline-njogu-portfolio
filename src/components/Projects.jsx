@@ -66,31 +66,6 @@ const projects = [
   },
   {
     index: '04',
-    name: 'Wordly Dictionary',
-    tagline: 'Word Lookup, Search & Save',
-    description:
-      'A dark-themed dictionary app for searching word definitions, saving favorites, and revisiting recent searches — built for quick, distraction-free lookups.',
-    role: ['React development', 'API & data handling', 'User experience', 'Search functionality'],
-    stack: ['JavaScript', 'React'],
-    links: [
-      { label: 'Live demo', href: 'https://wordly-dictionary-ten.vercel.app/' },
-      { label: 'Repository', href: 'https://github.com/caroline568/wordly-vocabulary-app' },
-    ],
-  },
-  {
-    index: '05',
-    name: 'Workout Tracker API',
-    tagline: 'Backend for Workouts & Exercises',
-    description:
-      'A backend API for logging workouts and exercises, with sets, reps, and duration tracked through a many-to-many exercise relationship — built as a Moringa School summative lab.',
-    role: ['REST API development', 'Database design', 'Serialization', 'Backend architecture'],
-    stack: ['Python', 'Flask', 'SQLAlchemy', 'Marshmallow'],
-    links: [
-      { label: 'Repository', href: 'https://github.com/caroline568/workout-tracker-api' },
-    ],
-  },
-  {
-    index: '06',
     name: 'Mood Tracker',
     tagline: 'Full-Stack Journaling App',
     description:
@@ -100,6 +75,39 @@ const projects = [
     links: [
       { label: 'Repository', href: 'https://github.com/caroline568/mood-tracker-app' },
     ],
+  },
+  {
+    index: '05',
+    name: 'MediFlow',
+    tagline: 'Healthcare Booking Platform',
+    description:
+      'A patient-facing booking platform for local clinics — live doctor availability, instant confirmation, free rescheduling, and a 24/7 AI patient assistant, built under Kavaro Agency.',
+    image: '/projects/mediflow.png',
+    role: ['Product design', 'Frontend development', 'AI integration'],
+    stack: ['React', 'Tailwind', 'Supabase', 'AI Assistant'],
+    links: [{ label: 'Live demo', href: 'https://healthbuddy-appointments.lovable.app' }],
+  },
+  {
+    index: '06',
+    name: 'Kavaro AI Support',
+    tagline: 'AI Customer Support Product',
+    description:
+      'An AI support widget trained only on a business\u2019s own documents — answers from that content, escalates what it doesn\u2019t know, and embeds on any site in one line of code.',
+    image: '/projects/kavaro-ai-support.png',
+    role: ['Product design', 'Frontend development', 'AI integration'],
+    stack: ['React', 'OpenAI API', 'Node.js'],
+    links: [{ label: 'Live demo', href: 'https://kavaro-support-ai.lovable.app' }],
+  },
+  {
+    index: '07',
+    name: 'LearnHub',
+    tagline: 'Learning Management Platform',
+    description:
+      'A learning management platform with courses, lessons, assignments, and certificates for students, authoring and grading tools for instructors, and an always-on AI tutor alongside every lesson.',
+    image: '/projects/learnhub.png',
+    role: ['Product design', 'Frontend development', 'AI integration'],
+    stack: ['React', 'Supabase', 'AI Assistant'],
+    links: [{ label: 'Live demo', href: 'https://nurture-learning-space.lovable.app' }],
   },
 ]
 
