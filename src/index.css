@@ -1,27 +1,32 @@
 :root {
   /* ---------- Color ----------
-     A warm, near-black "desert at dusk" base with one signature
-     gradient — the "bloom" — used deliberately: hero type, glows,
-     primary actions. Everything else stays quiet so the bloom reads
-     as a signature, not decoration. */
-  --bg: #14100c;
-  --bg-raised: #1d1610;
-  --bg-raised-2: #251c14;
-  --line: rgba(255, 236, 214, 0.09);
-  --line-strong: rgba(255, 236, 214, 0.17);
-  --text: #faf1e6;
-  --text-dim: #c7b6a4;
-  --text-faint: #8a7863;
+     "Ink & Amber" — a corporate-serious dark theme: deep navy ink,
+     off-white text, one restrained amber accent used sparingly for
+     hero type, glows, and primary actions. */
+  --bg: #0a1929;
+  --bg-raised: #112238;
+  --bg-raised-2: #172c46;
+  --line: rgba(228, 231, 238, 0.08);
+  --line-strong: rgba(228, 231, 238, 0.16);
+  --text: #f4f1ea;
+  --text-dim: #b7c0cf;
+  --text-faint: #7c889c;
 
-  --bloom-1: #ffc15e;
-  --bloom-2: #ff6b4a;
-  --bloom-3: #ff3d77;
-  --gradient-bloom: linear-gradient(120deg, var(--bloom-1) 0%, var(--bloom-2) 48%, var(--bloom-3) 100%);
+  --bloom-1: #f4b942;
+  --bloom-2: #e8951b;
+  --bloom-3: #c97a12;
+  --gradient-bloom: linear-gradient(120deg, var(--bloom-1) 0%, var(--bloom-2) 55%, var(--bloom-3) 100%);
 
-  --accent: #ff7a52;
-  --accent-hover: #ff9670;
-  --accent-ink: #200d06;
-  --accent-wash: rgba(255, 122, 82, 0.14);
+  --accent: #e8951b;
+  --accent-hover: #f4a83a;
+  --accent-ink: #1a1206;
+  --accent-wash: rgba(232, 149, 27, 0.14);
+
+  --grain-opacity: 0.03;
+  --glow-1: rgba(244, 185, 66, 0.07);
+  --glow-2: rgba(232, 149, 27, 0.06);
+  --glow-3: rgba(23, 44, 70, 0.4);
+  --shadow-color: rgba(0, 0, 0, 0.65);
 
   /* ---------- Type ---------- */
   --font-display: 'Fraunces', serif;
@@ -32,6 +37,40 @@
   --ease: cubic-bezier(0.16, 1, 0.3, 1);
 
   --max-w: 1160px;
+
+  color-scheme: dark;
+}
+
+/* ---------- Light theme — "Warm Neutral" ----------
+   Off-white, near-black text, one muted terracotta accent. Calmer
+   and more restrained than the dark theme's amber, for a quieter,
+   daylight-safe read. */
+[data-theme='light'] {
+  --bg: #faf8f5;
+  --bg-raised: #f1ede6;
+  --bg-raised-2: #e8e2d8;
+  --line: rgba(26, 26, 26, 0.08);
+  --line-strong: rgba(26, 26, 26, 0.15);
+  --text: #1a1a1a;
+  --text-dim: #55524c;
+  --text-faint: #8a8580;
+
+  --bloom-1: #d17a4f;
+  --bloom-2: #c1653d;
+  --bloom-3: #a8502c;
+
+  --accent: #c1653d;
+  --accent-hover: #a8502c;
+  --accent-ink: #fff8f2;
+  --accent-wash: rgba(193, 101, 61, 0.12);
+
+  --grain-opacity: 0.015;
+  --glow-1: rgba(209, 122, 79, 0.09);
+  --glow-2: rgba(193, 101, 61, 0.06);
+  --glow-3: rgba(168, 80, 44, 0.05);
+  --shadow-color: rgba(40, 30, 20, 0.14);
+
+  color-scheme: light;
 }
 
 * {
@@ -51,6 +90,7 @@ body {
   text-rendering: optimizeLegibility;
   overflow-x: hidden;
   position: relative;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 /* Ambient, slow-drifting warmth — the desert light. One gradient,
@@ -62,9 +102,9 @@ body::before {
   z-index: 0;
   pointer-events: none;
   background:
-    radial-gradient(680px circle at 14% -6%, rgba(255, 193, 94, 0.1), transparent 60%),
-    radial-gradient(760px circle at 92% 18%, rgba(255, 61, 119, 0.08), transparent 62%),
-    radial-gradient(900px circle at 50% 115%, rgba(255, 107, 74, 0.07), transparent 60%);
+    radial-gradient(680px circle at 14% -6%, var(--glow-1), transparent 60%),
+    radial-gradient(760px circle at 92% 18%, var(--glow-2), transparent 62%),
+    radial-gradient(900px circle at 50% 115%, var(--glow-3), transparent 60%);
   animation: driftLight 26s ease-in-out infinite alternate;
 }
 
@@ -80,7 +120,7 @@ body::after {
   inset: 0;
   z-index: 0;
   pointer-events: none;
-  opacity: 0.035;
+  opacity: var(--grain-opacity);
   mix-blend-mode: overlay;
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
 }
@@ -106,7 +146,7 @@ button {
 
 ::selection {
   background: var(--bloom-2);
-  color: #fff6ee;
+  color: var(--accent-ink);
 }
 
 @media (prefers-reduced-motion: reduce) {
