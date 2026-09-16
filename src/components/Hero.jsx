@@ -9,7 +9,7 @@ export default function Hero() {
             <span className="dot" /> Nairobi, Kenya — Product Engineer &amp; Founder
           </p>
           <p className="hero-status">
-            Completing Software Engineering at Moringa School — Aug 2026
+            Software Engineering, Moringa School — coursework complete, graduating late 2026
           </p>
           <h1 className="hero-title">
             Caroline Njogu builds

@@ -7,11 +7,24 @@ const stages = [
   },
   {
     label: 'Frontend',
-    items: ['React', 'Next.js', 'JavaScript', 'TypeScript'],
+    items: ['React', 'Next.js', 'Vite', 'JavaScript', 'TypeScript', 'Tailwind CSS'],
   },
   {
     label: 'Backend',
-    items: ['Node.js', 'Express.js', 'Flask', 'Python', 'REST APIs', 'SQL', 'PostgreSQL', 'Supabase'],
+    items: [
+      'Node.js',
+      'Express.js',
+      'Flask',
+      'Python',
+      'REST APIs',
+      'JWT Authentication',
+      'SQLAlchemy',
+      'Marshmallow',
+      'pytest',
+      'SQL',
+      'PostgreSQL',
+      'Supabase',
+    ],
   },
   {
     label: 'AI',
@@ -19,7 +32,7 @@ const stages = [
   },
   {
     label: 'Deployment',
-    items: ['Git', 'Vercel', 'Cloudflare'],
+    items: ['Git', 'GitHub', 'Vercel', 'Cloudflare'],
   },
 ]
 

@@ -45,6 +45,28 @@ const projects = [
   },
   {
     index: '03',
+    name: 'PesaRate',
+    tagline: 'Currency & Travel-Money Workspace',
+    description:
+      'A full-stack currency and travel-money workspace with JWT-authenticated accounts, provider-aware conversion estimates, trip planning, currency alerts, and exchange-rate trend visualization.',
+    role: ['Frontend development', 'Backend development', 'Auth implementation', 'API design'],
+    stack: ['React', 'Flask', 'PostgreSQL', 'JWT Authentication'],
+    links: [{ label: 'Live site', href: 'https://pesarate.vercel.app/' }],
+  },
+  {
+    index: '04',
+    name: 'Workout Tracker API',
+    tagline: 'Backend REST API',
+    description:
+      'A backend API for managing workouts and exercises, built with a RESTful architecture and schema-based serialization and validation.',
+    role: ['REST API development', 'Database design', 'Schema validation'],
+    stack: ['Flask', 'SQLAlchemy', 'Marshmallow'],
+    links: [
+      { label: 'Repository', href: 'https://github.com/caroline568/workout-tracker-api' },
+    ],
+  },
+  {
+    index: '05',
     name: 'Inventory Management System',
     tagline: 'REST API & Backend Architecture',
     description:
@@ -65,7 +87,7 @@ const projects = [
     ],
   },
   {
-    index: '04',
+    index: '06',
     name: 'Mood Tracker',
     tagline: 'Full-Stack Journaling App',
     description:
@@ -77,7 +99,7 @@ const projects = [
     ],
   },
   {
-    index: '05',
+    index: '07',
     name: 'MediFlow',
     tagline: 'Healthcare Booking Platform',
     description:
@@ -88,7 +110,7 @@ const projects = [
     links: [{ label: 'Live demo', href: 'https://healthbuddy-appointments.lovable.app' }],
   },
   {
-    index: '06',
+    index: '08',
     name: 'Kavaro AI Support',
     tagline: 'AI Customer Support Product',
     description:
@@ -99,7 +121,7 @@ const projects = [
     links: [{ label: 'Live demo', href: 'https://kavaro-support-ai.lovable.app' }],
   },
   {
-    index: '07',
+    index: '09',
     name: 'LearnHub',
     tagline: 'Learning Management Platform',
     description:

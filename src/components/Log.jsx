@@ -12,16 +12,28 @@ const entries = [
     detail: 'Design and engineering studio building websites, apps, and AI tools for real clients.',
   },
   {
+    hash: 'c1a4de9',
+    when: 'Nov 2025',
+    title: 'Professional Certificate in UI/UX Design, Moringa School',
+    detail: 'Formal certification building on the Product Design bootcamp.',
+  },
+  {
     hash: 'e01b73f',
-    when: 'Feb – Aug 2026',
+    when: 'Feb – Sep 2026',
     title: 'Software Engineering, Moringa School',
-    detail: 'JavaScript, Python, React, Next.js, backend systems, databases, APIs.',
+    detail: 'JavaScript, Python, React, Next.js, backend systems, databases, APIs. Coursework complete; graduation & certificate expected late 2026.',
   },
   {
     hash: 'f7d90a2',
     when: 'Jun 2026 →',
     title: 'Building Finora',
     detail: 'AI-powered financial coach for everyday Kenyans — in public, feature by feature.',
+  },
+  {
+    hash: 'd2c8f31',
+    when: 'Mar 2026',
+    title: 'Generative AI Tools certification, Moringa School',
+    detail: 'Applied directly to the AI layers in Finora, MediFlow, and Kavaro AI Support.',
   },
   {
     hash: 'b6e21d4',
