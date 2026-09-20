@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Contact — Caroline Njogu</title>
+  <meta name="description" content="Get in touch with Caroline Njogu, Full-Stack Developer, about a project or opportunity.">
+  <meta name="theme-color" content="#f0f1ec">
+  <meta property="og:title" content="Contact — Caroline Njogu">
+  <meta property="og:description" content="Get in touch with Caroline Njogu, Full-Stack Developer, about a project or opportunity.">
+  <meta property="og:type" content="website">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%231e5a46'/%3E%3Crect x='6' y='6' width='7' height='7' fill='%23c8321f'/%3E%3Ctext x='6' y='27' font-family='Arial' font-weight='700' font-size='13' fill='%23f0f1ec'%3ECN%3C/text%3E%3C/svg%3E">
+  <link rel="preload" href="assets/fonts/bricolage-grotesque-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="assets/fonts/newsreader-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="assets/css/styles.css">
+  <script>document.documentElement.classList.add("js");</script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="wrap">
+      <a class="brand" href="index.html" aria-label="Caroline Njogu — home">Caroline Njogu</a>
+      <nav aria-label="Main">
+        <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
+          <span class="bars" aria-hidden="true"></span><span class="label">Menu</span>
+        </button>
+        <ul class="nav-list" id="site-nav">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="projects.html">Projects</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html" aria-current="page">Contact</a></li>
+          <li><a href="more.html">More</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <header class="page-head wrap">
+      <h1>Contact Me</h1>
+      <p class="lede">Have a project, opportunity, or idea you'd like to discuss? Let's connect.</p>
+    </header>
+
+    <div class="wrap section" style="padding-top:1rem">
+      <div class="contact-grid">
+        <ul class="contact-links" aria-label="Contact links">
+          <li><a href="mailto:njogucaroline91@gmail.com" data-email><span class="label">Email</span><span class="value" data-email-text>njogucaroline91@gmail.com</span></a></li>
+          <li><a href="https://linkedin.com/in/carolinenjogu" data-link="linkedin" target="_blank" rel="noopener noreferrer"><span class="label">LinkedIn</span><span class="value">linkedin.com/in/carolinenjogu<span class="sr-only"> (opens in a new tab)</span></span></a></li>
+          <li><a href="https://github.com/caroline568" data-link="github" target="_blank" rel="noopener noreferrer"><span class="label">GitHub</span><span class="value">github.com/caroline568<span class="sr-only"> (opens in a new tab)</span></span></a></li>
+          <li><a href="https://kavaroagency.com" data-link="kavaro" target="_blank" rel="noopener noreferrer"><span class="label">Kavaro Agency</span><span class="value">kavaroagency.com<span class="sr-only"> (opens in a new tab)</span></span></a></li>
+        </ul>
+
+        <form class="form" id="contact-form" novalidate>
+          <div class="field">
+            <label for="name">Name</label>
+            <input id="name" name="name" type="text" autocomplete="name" required aria-describedby="name-err">
+            <p class="error" id="name-err" role="alert"></p>
+          </div>
+          <div class="field">
+            <label for="email">Email</label>
+            <input id="email" name="email" type="email" autocomplete="email" required aria-describedby="email-err">
+            <p class="error" id="email-err" role="alert"></p>
+          </div>
+          <div class="field">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" required aria-describedby="message-err"></textarea>
+            <p class="error" id="message-err" role="alert"></p>
+          </div>
+          <div class="hp" aria-hidden="true"><label>Company <input type="text" name="company" tabindex="-1" autocomplete="off"></label></div>
+          <button class="btn" type="submit">Send Message</button>
+          <p class="form-status" id="form-status" role="status" aria-live="polite"></p>
+        </form>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <span>© 2026 Caroline Njogu. Nairobi, Kenya.</span>
+      <span>Full-Stack Developer with a UI/UX &amp; Product Design background</span>
+    </div>
+  </footer>
+
+  <script src="assets/js/config.js"></script>
+  <script src="assets/js/icons.js"></script>
+  <script src="assets/js/tech.js"></script>
+  <script src="assets/js/main.js"></script>
+  <script src="assets/js/contact.js"></script>
+</body>
+</html>
