@@ -1,4 +1,26 @@
 {
+  "redirects": [
+    {
+      "source": "/more.html",
+      "destination": "/more",
+      "permanent": true
+    },
+    {
+      "source": "/projects.html",
+      "destination": "/projects",
+      "permanent": true
+    },
+    {
+      "source": "/about.html",
+      "destination": "/about",
+      "permanent": true
+    },
+    {
+      "source": "/contact.html",
+      "destination": "/contact",
+      "permanent": true
+    }
+  ],
   "rewrites": [
     {
       "source": "/more",
