@@ -1,5 +1,11 @@
 {
   "redirects": [
+     {
+      "source": "/index.html",
+      "destination": "/home",
+      "permanent": true
+    },
+
     {
       "source": "/more.html",
       "destination": "/more",
@@ -22,6 +28,11 @@
     }
   ],
   "rewrites": [
+     {
+      "source": "/home",
+      "destination": "/index.html"
+    },
+
     {
       "source": "/more",
       "destination": "/more.html"
