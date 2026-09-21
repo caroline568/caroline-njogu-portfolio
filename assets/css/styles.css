@@ -251,8 +251,7 @@ main { display: block; }
 .portrait { position: relative; width: min(100%, 25rem); justify-self: end; margin: 0; }
 .portrait-art { position: relative; }
 .portrait-art::before {
-  content: ""; position: absolute; inset: 0; border: 1.5px solid var(--forest); border-radius: 50%;
-  transform: translate(7%, 6%);
+  display: none;
 }
 .portrait-frame {
   position: relative; aspect-ratio: 1 / 1; border-radius: 50%; overflow: hidden; background: #c0c4cb;
