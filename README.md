@@ -1,47 +1,49 @@
 # Caroline Njogu — Portfolio
 
-A static, five-page portfolio (Home, Projects, About, Contact, More). No build step, no dependencies:
-plain HTML, CSS and JavaScript, with the fonts and icons bundled locally.
+A projects-first portfolio built with React + Vite. Dark, tech-forward,
+built around a "build log" of the journey from education → design →
+engineering, with Finora, Kavaro Agency, Inventory Management System, and
+Wordly Dictionary as the featured work.
 
-## Run it
+## Run locally
 
-Open `index.html` in a browser, or serve the folder:
+```bash
+npm install
+npm run dev
+```
 
-    python3 -m http.server 8000
+Then open the local URL Vite prints (usually `http://localhost:5173`).
 
-Deploy by dragging the folder onto Vercel, Netlify or Cloudflare Pages (or push it to a repo they watch).
+## Build for production
 
-## What to edit
+```bash
+npm run build
+```
 
-| I want to…                         | Edit                                           |
-| ---------------------------------- | ---------------------------------------------- |
-| Change my email, LinkedIn, GitHub, Kavaro link, or resume path | `assets/js/config.js` |
-| Replace my photo                   | `assets/img/profile.webp` (keep the filename)  |
-| Replace my resume                  | `resume/Caroline-Njogu-Resume.pdf` (keep the filename) |
-| Add screenshots                    | `assets/img/screenshots/` — see the README.txt there |
-| Edit or add a project case study   | `assets/js/projects-data.js`                   |
-| Change colours and fonts           | the tokens at the top of `assets/css/styles.css` |
-| Connect the contact form           | `contactForm.endpoint` in `assets/js/config.js` |
-
-The same URLs are also written into the HTML as a fallback, so if you change a link in `config.js`,
-search-and-replace the old one in the `.html` files too.
-
-## Contact form
-
-Until you add a form-service endpoint (Formspree, Getform, Web3Forms, Netlify Forms…), "Send Message" validates the
-fields and opens the visitor's email app with the message pre-filled. Once `endpoint` is set, it posts JSON to it instead.
+Outputs static files to `dist/`, ready to deploy to Vercel, Netlify, GitHub
+Pages, or any static host.
 
 ## Structure
 
-    index.html  projects.html  about.html  contact.html  more.html
-    assets/css/styles.css          design tokens + all styles
-    assets/js/config.js            links, email, resume, form endpoint
-    assets/js/projects-data.js     the five case studies
-    assets/js/tech.js, icons.js    technology names and inline SVG icons
-    assets/js/main.js              nav, role rotator, tech grids
-    assets/js/projects.js          the project workspace
-    assets/js/contact.js           form validation and sending
-    assets/fonts/                  Bricolage Grotesque + Newsreader (SIL OFL)
-    resume/                        resume PDF
+```
+src/
+  components/
+    Nav.jsx        top navigation
+    Hero.jsx        intro + tagline
+    Projects.jsx     project list (edit the `projects` array to add/reorder)
+    ProjectCard.jsx  single project card
+    About.jsx        bio + journey log
+    Log.jsx          "build log" timeline — the journey from education to now
+    Skills.jsx       grouped skill chips
+    Contact.jsx      links + footer
+  App.jsx
+  App.css
+  index.css
+```
 
-Brand icons come from Simple Icons (CC0) and Devicon (MIT).
+## Adding a project later
+
+Open `src/components/Projects.jsx` and add an entry to the `projects` array —
+each one just needs an index, name, tagline, description, stack, and links.
+That's where the Online Bookstore App, Managing Event Attendees, and the
+Task Manager can go once they're ready.

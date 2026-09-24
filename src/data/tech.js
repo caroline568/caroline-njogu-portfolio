@@ -1,0 +1,31 @@
+/* Technology names → icon keys (icons live in icons.js).
+   Anything without a brand mark uses the neutral "generic" glyph. */
+export const TECH = {
+  react:        { name: "React",           icon: "react" },
+  nextjs:       { name: "Next.js",         icon: "nextjs" },
+  vite:         { name: "Vite",            icon: "vite" },
+  tailwind:     { name: "Tailwind CSS",    icon: "tailwind" },
+  javascript:   { name: "JavaScript",      icon: "javascript" },
+  html5:        { name: "HTML5",           icon: "html5" },
+  css3:         { name: "CSS3",            icon: "css3" },
+  nodejs:       { name: "Node.js",         icon: "nodejs" },
+  express:      { name: "Express",         icon: "express" },
+  python:       { name: "Python",          icon: "python" },
+  flask:        { name: "Flask",           icon: "flask" },
+  sqlalchemy:   { name: "SQLAlchemy",      icon: "sqlalchemy" },
+  marshmallow:  { name: "Marshmallow",     icon: "generic" },
+  postgresql:   { name: "PostgreSQL",      icon: "postgresql" },
+  supabase:     { name: "Supabase",        icon: "supabase" },
+  jwt:          { name: "JWT",             icon: "jwt" },
+  pytest:       { name: "pytest",          icon: "pytest" },
+  openfoodfacts:{ name: "OpenFoodFacts API", icon: "generic" },
+  frankfurter:  { name: "Frankfurter API", icon: "generic" },
+  git:          { name: "Git",             icon: "git" },
+  github:       { name: "GitHub",          icon: "github" },
+  figma:        { name: "Figma",           icon: "figma" },
+  vercel:       { name: "Vercel",          icon: "vercel" },
+  render:       { name: "Render",          icon: "render" },
+  cloudflare:   { name: "Cloudflare",      icon: "cloudflare" },
+  postman:      { name: "Postman",         icon: "postman" },
+  vscode:       { name: "VS Code",         icon: "vscode" }
+};
