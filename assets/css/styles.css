@@ -61,7 +61,7 @@ html {
 
 body {
   margin: 0;
-  background: var(--bone);
+  background: transparent;
   color: var(--ink);
   font-family: var(--font-text);
   font-size: 1.1875rem;
@@ -69,6 +69,52 @@ body {
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
 }
+
+
+/* Soft, slow-drifting bubbles fixed behind every page — gives the site some
+   life instead of sitting flat like a static resume page. Purely decorative. */
+.bg-motion { position: fixed; inset: 0; z-index: -1; overflow: hidden; background: var(--bone); pointer-events: none; }
+.bg-bubble {
+  position: absolute; border-radius: 50%; filter: blur(40px); opacity: .16;
+  animation-name: bg-drift; animation-timing-function: ease-in-out; animation-iteration-count: infinite;
+  will-change: transform;
+}
+@keyframes bg-drift {
+  0%, 100% { transform: translate3d(0, 0, 0) scale(1); }
+  50% { transform: translate3d(3%, -6%, 0) scale(1.08); }
+}
+@media (prefers-reduced-motion: reduce) { .bg-bubble { animation: none; } }
+@media (max-width: 640px) { .bg-bubble { filter: blur(26px); } }
+
+/* Icon + label site navigation — the ONE nav, right-aligned, sits below the
+   hero actions on Home and below each page's heading elsewhere. */
+.quick-nav { display: flex; justify-content: flex-end; margin-top: 1.5rem; }
+.quick-nav ul { display: flex; flex-wrap: wrap; justify-content: flex-end; gap: .6rem; }
+.quick-nav-item {
+  display: inline-flex; flex-direction: column; align-items: center; gap: .35rem;
+  width: 4.75rem; padding: .7rem .5rem .6rem; border: 1px solid var(--line); border-radius: 14px;
+  background: var(--paper); color: var(--ink-soft); text-decoration: none; text-align: center;
+  font-family: var(--font-display); font-weight: 550; font-size: .8rem; line-height: 1.1;
+  transform: translateY(0); transition: transform .2s ease, border-color .2s ease, background .2s ease, color .2s ease, box-shadow .2s ease;
+}
+.quick-nav-icon { width: 1.3rem; height: 1.3rem; flex: none; fill: none; stroke: currentColor; stroke-width: 1.6; stroke-linecap: round; stroke-linejoin: round; transition: transform .2s ease; }
+.quick-nav-item:hover, .quick-nav-item:focus-visible {
+  color: var(--ink); border-color: var(--forest); background: #fff;
+  transform: translateY(-3px); box-shadow: 0 6px 14px rgba(16, 35, 28, .1);
+}
+.quick-nav-item:hover .quick-nav-icon, .quick-nav-item:focus-visible .quick-nav-icon { transform: scale(1.1); }
+.quick-nav-item[aria-current="page"] { color: var(--bone); background: var(--forest); border-color: var(--forest); }
+.quick-nav-item[aria-current="page"]:hover { transform: translateY(-3px); background: var(--deep); border-color: var(--deep); }
+@media (prefers-reduced-motion: reduce) {
+  .quick-nav-item, .quick-nav-icon { transition: none; }
+  .quick-nav-item:hover, .quick-nav-item:focus-visible { transform: none; }
+}
+@media (max-width: 560px) { .quick-nav ul { justify-content: flex-start; } }
+
+.kicker { font-family: var(--font-display); font-weight: 650; font-size: .85rem; letter-spacing: .12em; text-transform: uppercase; color: var(--forest); margin: 0 0 .75rem; }
+
+/* Small, unlabeled note tucked at the bottom of the page — not flagged as a joke, just there to find. */
+.stray-note { margin: 3rem 0 0; font-family: var(--font-text); font-style: italic; font-size: .85rem; color: var(--muted); text-align: center; opacity: .7; }
 
 img, svg { display: block; max-width: 100%; }
 a { color: inherit; }
@@ -249,10 +295,6 @@ main { display: block; }
 
 /* Portrait — swap assets/img/profile.webp (any square-ish photo works) */
 .portrait { position: relative; width: min(100%, 25rem); justify-self: end; margin: 0; }
-.portrait-art { position: relative; }
-.portrait-art::before {
-  display: none;
-}
 .portrait-frame {
   position: relative; aspect-ratio: 1 / 1; border-radius: 50%; overflow: hidden; background: #c0c4cb;
 }
@@ -483,21 +525,16 @@ html:not(.js) .rotator-item:first-child { opacity: 1; transform: none; }
 .skills span { font-size: 1rem; color: var(--muted); line-height: 1.4; }
 @media (max-width: 720px) { .skills { columns: 1; } }
 
-.grid-tools { display: grid; grid-template-columns: repeat(auto-fill, minmax(4.75rem, 1fr)); gap: .75rem; max-width: 46rem; }
+.grid-tools { display: grid; grid-template-columns: repeat(auto-fill, minmax(5.5rem, 1fr)); gap: .75rem; max-width: 46rem; }
 .tool {
-  position: relative; display: grid; place-items: center; aspect-ratio: 1; cursor: default;
-  border: 1px solid var(--line); border-radius: var(--radius); background: var(--paper); color: var(--ink);
+  display: flex; flex-direction: column; align-items: center; gap: .4rem; text-align: center;
+  padding: .8rem .5rem .65rem; border: 1px solid var(--line); border-radius: var(--radius);
+  background: var(--paper); color: var(--ink);
   transition: border-color .2s ease, color .2s ease;
 }
-.tool .icon { width: 1.9rem; height: 1.9rem; }
-.tool:hover, .tool:focus-visible { border-color: var(--ink); color: var(--forest); }
-.tool-tip {
-  position: absolute; left: 50%; bottom: calc(100% + 8px); transform: translate(-50%, 4px); z-index: 5;
-  padding: .35rem .6rem; border-radius: 3px; background: var(--ink); color: var(--bone);
-  font-family: var(--font-display); font-weight: 550; font-size: .82rem; white-space: nowrap; pointer-events: none;
-  opacity: 0; transition: opacity .15s ease, transform .15s ease;
-}
-.tool:hover .tool-tip, .tool:focus-visible .tool-tip { opacity: 1; transform: translate(-50%, 0); }
+.tool .icon { width: 1.7rem; height: 1.7rem; }
+.tool span { font-family: var(--font-display); font-weight: 550; font-size: .82rem; line-height: 1.2; }
+.tool:hover, .tool:focus-visible { border-color: var(--forest); color: var(--forest); }
 
 /* ==========================================================================
    CONTACT
@@ -543,107 +580,3 @@ html:not(.js) .rotator-item:first-child { opacity: 1; transform: none; }
 .resource h2 { font-size: 1.6rem; letter-spacing: -0.03em; }
 .resource p { margin: 0; color: var(--ink-soft); font-size: 1.05rem; line-height: 1.45; }
 .resource .link-arrow { margin-top: auto; padding-top: .75rem; }
-
-/* =========================================================
-   LIVING PAGE BACKGROUND
-   ========================================================= */
-
-body {
-  position: relative;
-  overflow-x: hidden;
-}
-
-/* Background layer only — does not affect content */
-.ambient-background {
-  position: fixed;
-  inset: 0;
-  z-index: -1;
-  pointer-events: none;
-  overflow: hidden;
-
-  background:
-    radial-gradient(
-      circle at 15% 25%,
-      rgba(30, 90, 70, 0.10),
-      transparent 32%
-    ),
-    radial-gradient(
-      circle at 85% 70%,
-      rgba(200, 50, 31, 0.06),
-      transparent 30%
-    ),
-    var(--bone);
-}
-
-/* Slow movement across the entire background */
-.ambient-background::before,
-.ambient-background::after {
-  content: "";
-  position: absolute;
-  width: 65vw;
-  height: 65vw;
-  border-radius: 50%;
-  filter: blur(70px);
-  opacity: 0.45;
-  animation: backgroundFlow 24s ease-in-out infinite alternate;
-}
-
-.ambient-background::before {
-  top: -30%;
-  left: -20%;
-  background: rgba(30, 90, 70, 0.12);
-}
-
-.ambient-background::after {
-  right: -25%;
-  bottom: -30%;
-  background: rgba(200, 50, 31, 0.07);
-  animation-duration: 30s;
-  animation-delay: -8s;
-}
-
-@keyframes backgroundFlow {
-  0% {
-    transform: translate3d(0, 0, 0) scale(1);
-  }
-
-  50% {
-    transform: translate3d(8vw, 5vh, 0) scale(1.08);
-  }
-
-  100% {
-    transform: translate3d(-5vw, 10vh, 0) scale(0.96);
-  }
-}
-
-/* Dark mode */
-html[data-theme="dark"] .ambient-background {
-  background:
-    radial-gradient(
-      circle at 15% 25%,
-      rgba(70, 150, 120, 0.13),
-      transparent 32%
-    ),
-    radial-gradient(
-      circle at 85% 70%,
-      rgba(200, 70, 50, 0.08),
-      transparent 30%
-    ),
-    #0d1512;
-}
-
-html[data-theme="dark"] .ambient-background::before {
-  background: rgba(70, 150, 120, 0.13);
-}
-
-html[data-theme="dark"] .ambient-background::after {
-  background: rgba(200, 70, 50, 0.08);
-}
-
-/* Respect accessibility settings */
-@media (prefers-reduced-motion: reduce) {
-  .ambient-background::before,
-  .ambient-background::after {
-    animation: none;
-  }
-}

@@ -69,8 +69,7 @@
       var t = (window.TECH || {})[k.trim()];
       if (!t) return "";
       if (variant === "tools") {
-        return '<li class="tool" tabindex="0" aria-label="' + t.name + '">' + window.icon(t.icon) +
-          '<span class="tool-tip" aria-hidden="true">' + t.name + "</span></li>";
+        return '<li class="tool">' + window.icon(t.icon) + '<span>' + t.name + "</span></li>";
       }
       if (variant === "inline") return "<li>" + window.icon(t.icon) + t.name + "</li>";
       return '<li class="chip">' + window.icon(t.icon) + t.name + "</li>";

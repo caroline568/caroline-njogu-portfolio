@@ -17,22 +17,11 @@
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
+  <div class="bg-motion" aria-hidden="true"><span class="bg-bubble" style="width:220px;height:220px;left:6%;top:78%;background:var(--forest);animation-duration:26s;animation-delay:0s"></span><span class="bg-bubble" style="width:140px;height:140px;left:82%;top:62%;background:var(--signal);animation-duration:20s;animation-delay:3s"></span><span class="bg-bubble" style="width:300px;height:300px;left:42%;top:88%;background:var(--forest);animation-duration:32s;animation-delay:6s"></span><span class="bg-bubble" style="width:110px;height:110px;left:18%;top:38%;background:var(--deep);animation-duration:18s;animation-delay:2s"></span><span class="bg-bubble" style="width:190px;height:190px;left:68%;top:28%;background:var(--forest);animation-duration:24s;animation-delay:9s"></span><span class="bg-bubble" style="width:120px;height:120px;left:92%;top:12%;background:var(--signal);animation-duration:22s;animation-delay:5s"></span><span class="bg-bubble" style="width:260px;height:260px;left:26%;top:6%;background:var(--deep);animation-duration:30s;animation-delay:1s"></span></div>
 
   <header class="site-header">
     <div class="wrap">
       <a class="brand" href="index.html" aria-label="Caroline Njogu — home">Caroline Njogu</a>
-      <nav aria-label="Main">
-        <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
-          <span class="bars" aria-hidden="true"></span><span class="label">Menu</span>
-        </button>
-        <ul class="nav-list" id="site-nav">
-          <li><a href="index.html">Home</a></li>
-          <li><a href="projects.html">Projects</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="contact.html">Contact</a></li>
-          <li><a href="more.html" aria-current="page">More</a></li>
-        </ul>
-      </nav>
     </div>
   </header>
 
@@ -40,6 +29,7 @@
     <header class="page-head wrap">
       <h1>More</h1>
       <p class="lede">Additional resources, tools, experiments, and links related to my work.</p>
+      <nav class="quick-nav" aria-label="Site navigation"><ul><li><a class="quick-nav-item" href="index.html"><svg class="quick-nav-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M4 11.5 12 4l8 7.5"/><path d="M6 10v9h12v-9"/><path d="M10 19v-5h4v5"/></svg><span>Home</span></a></li><li><a class="quick-nav-item" href="projects.html"><svg class="quick-nav-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="4" y="4" width="7" height="7" rx="1"/><rect x="13" y="4" width="7" height="7" rx="1"/><rect x="4" y="13" width="7" height="7" rx="1"/><rect x="13" y="13" width="7" height="7" rx="1"/></svg><span>Projects</span></a></li><li><a class="quick-nav-item" href="about.html"><svg class="quick-nav-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="12" cy="8" r="3.2"/><path d="M5 20c1.5-4 5-6 7-6s5.5 2 7 6"/></svg><span>About</span></a></li><li><a class="quick-nav-item" href="contact.html"><svg class="quick-nav-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="3.5" y="5.5" width="17" height="13" rx="1.5"/><path d="m4 6.5 8 6.5 8-6.5"/></svg><span>Contact</span></a></li><li><a class="quick-nav-item" href="more.html" aria-current="page"><svg class="quick-nav-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="6" cy="12" r="1.4" fill="currentColor" stroke="none"/><circle cx="12" cy="12" r="1.4" fill="currentColor" stroke="none"/><circle cx="18" cy="12" r="1.4" fill="currentColor" stroke="none"/></svg><span>More</span></a></li></ul></nav>
     </header>
 
     <div class="wrap section" style="padding-top:1rem">
@@ -54,18 +44,13 @@
         </a>
       </div>
     </div>
-    <section class="more-quote wrap" aria-label="Just because">
-  <blockquote>
-    <p>“It works on my machine.”</p>
-    <cite>— Caroline, allegedly.</cite>
-  </blockquote>
-</section>
+    <p class="stray-note">It works on my machine. &mdash; Caroline, allegedly.</p>
   </main>
-  
+
   <footer class="site-footer">
     <div class="wrap">
       <span>© 2026 Caroline Njogu. Nairobi, Kenya.</span>
-      <span>Full-Stack Developer . AI . UI/UX Designer</span>
+      <span>Full-Stack Developer with a UI/UX &amp; Product Design background</span>
     </div>
   </footer>
 
