@@ -1,6 +1,41 @@
-/* Shared behaviour: config-driven links, mobile nav, role rotator, tech grids. */
+/* Shared behaviour: config-driven links, mobile nav, role rotator, tech grids, scroll nav, resume modal. */
 (function () {
   var S = window.SITE || {};
+
+  /* Scroll-triggered navigation visibility */
+  var scrollNav = document.querySelector('.scroll-nav');
+  if (scrollNav) {
+    window.addEventListener('scroll', function () {
+      if (window.scrollY > 200) {
+        scrollNav.classList.add('is-visible');
+      } else {
+        scrollNav.classList.remove('is-visible');
+      }
+    });
+  }
+
+  /* Resume preview modal */
+  var resumeBtn = document.querySelector('[data-modal-resume]');
+  var resumeModal = document.getElementById('resume-modal');
+  if (resumeBtn && resumeModal) {
+    resumeBtn.addEventListener('click', function (e) {
+      e.preventDefault();
+      resumeModal.showModal();
+    });
+  }
+  if (resumeModal) {
+    var modalClose = resumeModal.querySelector('.modal-close');
+    if (modalClose) {
+      modalClose.addEventListener('click', function () {
+        resumeModal.close();
+      });
+    }
+    resumeModal.addEventListener('click', function (e) {
+      if (e.target === resumeModal) {
+        resumeModal.close();
+      }
+    });
+  }
 
   /* Inline SVG helper, used by the tech grids and the projects workspace */
   window.icon = function (key, cls) {
