@@ -8,7 +8,7 @@
    - link            { url, label }   label defaults to "Live Project"
    - role            Full-Stack Developer always comes first
    - extra           optional 4th metadata item, e.g. Design contribution
-   - screenshot      path to the image (see assets/screenshots/README.txt)
+   - screenshot      path to the image (see assets/img/screenshots/README.txt)
    - mission         array of paragraphs
    - architecture    array of [layer, detail] rows — only list what is true
    - challenges      array of { title, body }
@@ -28,7 +28,7 @@ window.PROJECTS = [
     timeline: "Started August 2026",
     classification: "Full-Stack / FinTech / Web Application",
     extra: { label: "Design contribution", value: "UI/UX / Product Design" },
-    screenshot: "assets/screenshots/pesarate.png",
+    screenshot: "assets/img/screenshots/pesarate.png",
     mission: [
       "Moving money across borders means trusting a rate that is hard to check. PesaRate began as a comparison of live mid-market exchange rates against what remittance channels actually charge, built for Kenyans who send, receive and spend money abroad.",
       "It has since grown into one workspace for currency conversion, provider-aware fee estimates, travel budgeting, exchange-rate monitoring and trend visualization, so the decision happens in one place instead of across several tools."
@@ -63,7 +63,7 @@ window.PROJECTS = [
     timeline: "September 2025 – Present",
     classification: "Full-Stack / Agency Platform / Web Application",
     extra: { label: "Design contribution", value: "UI/UX / Product Design" },
-    screenshot: "assets/screenshots/kavaro-agency.png",
+    screenshot: "assets/img/screenshots/kavaro-agency.png",
     mission: [
       "Kavaro Agency is a digital product studio for web development, product design and AI-powered solutions. Its website has two jobs at once: present the studio's work with polish, and handle the practical side of the business, from leads to booked calls and inquiries.",
       "It is designed for small businesses, startups and entrepreneurs looking for a product partner."
@@ -97,7 +97,7 @@ window.PROJECTS = [
     timeline: "2026 · Moringa School",
     classification: "Back-End / REST API / CLI",
     extra: { label: "Focus", value: "Back-end and API design" },
-    screenshot: "assets/screenshots/inventory-management-system.png",
+    screenshot: "assets/img/screenshots/inventory-management-system.png",
     mission: [
       "A RESTful API for managing inventory, with full create, read, update and delete operations and product details enriched from OpenFoodFacts. A companion command-line interface manages the same inventory from the terminal.",
       "Built during Moringa School's Software Engineering program to practice production-style back-end work: a clean API, an external integration, automated tests and a pull-request workflow."
@@ -132,7 +132,7 @@ window.PROJECTS = [
     timeline: "2026 · Moringa School",
     classification: "Back-End / REST API / Fitness",
     extra: { label: "Focus", value: "Back-end and data modeling" },
-    screenshot: "assets/screenshots/workout-tracker-api.png",
+    screenshot: "assets/img/screenshots/workout-tracker-api.png",
     mission: [
       "A RESTful back end for a workout-tracking app used by personal trainers. Workouts contain many exercises, and each exercise can be reused across workouts with its own sets, reps and duration.",
       "Built as a Moringa School lab to practice relational data modeling, validation and reliable API responses."
@@ -165,7 +165,7 @@ window.PROJECTS = [
     timeline: "2026 · Moringa School",
     classification: "Full-Stack / Wellness / Web Application",
     extra: { label: "Focus", value: "Authentication and user-owned data" },
-    screenshot: "assets/screenshots/mood-tracker.png",
+    screenshot: "assets/img/screenshots/mood-tracker.png",
     mission: [
       "A private wellness tracker where each person logs how they feel and sees only their own entries.",
       "Built to practice secure, account-based data management across a full stack, with a clean line between the React front end and the Flask back end."
