@@ -1,18 +1,6 @@
-/* Shared behaviour: config-driven links, mobile nav, role rotator, tech grids, scroll nav, resume modal. */
+/* Shared behaviour: config-driven links, mobile nav, role rotator, tech grids, resume modal. */
 (function () {
   var S = window.SITE || {};
-
-  /* Scroll-triggered navigation visibility */
-  var scrollNav = document.querySelector('.scroll-nav');
-  if (scrollNav) {
-    window.addEventListener('scroll', function () {
-      if (window.scrollY > 200) {
-        scrollNav.classList.add('is-visible');
-      } else {
-        scrollNav.classList.remove('is-visible');
-      }
-    });
-  }
 
   /* Resume preview modal */
   var resumeBtn = document.querySelector('[data-modal-resume]');

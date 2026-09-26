@@ -71,20 +71,78 @@ body {
 }
 
 
-/* Soft, slow-drifting bubbles fixed behind every page — gives the site some
-   life instead of sitting flat like a static resume page. Purely decorative. */
+/* Soft, animated background with light rays and floating particles */
 .bg-motion { position: fixed; inset: 0; z-index: -1; overflow: hidden; background: var(--bone); pointer-events: none; }
-.bg-bubble {
-  position: absolute; border-radius: 50%; filter: blur(40px); opacity: .16;
-  animation-name: bg-drift; animation-timing-function: ease-in-out; animation-iteration-count: infinite;
-  will-change: transform;
+
+/* Light rays (aurora-like) */
+.light-rays {
+  position: absolute; width: 100%; height: 100%; opacity: 0.08;
 }
-@keyframes bg-drift {
-  0%, 100% { transform: translate3d(0, 0, 0) scale(1); }
-  50% { transform: translate3d(3%, -6%, 0) scale(1.08); }
+.ray {
+  position: absolute; width: 200%; height: 100%;
+  background: linear-gradient(90deg, transparent, var(--forest) 20%, var(--forest) 80%, transparent);
+  filter: blur(80px);
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
 }
-@media (prefers-reduced-motion: reduce) { .bg-bubble { animation: none; } }
-@media (max-width: 640px) { .bg-bubble { filter: blur(26px); } }
+.ray-1 {
+  top: 10%; left: -50%;
+  animation: ray-drift 12s infinite; animation-delay: 0s;
+}
+.ray-2 {
+  top: 40%; left: -50%;
+  animation: ray-drift 15s infinite; animation-delay: 3s;
+  background: linear-gradient(90deg, transparent, var(--signal) 20%, var(--signal) 80%, transparent);
+}
+.ray-3 {
+  top: 70%; left: -50%;
+  animation: ray-drift 18s infinite; animation-delay: 6s;
+  background: linear-gradient(90deg, transparent, var(--forest) 20%, var(--forest) 80%, transparent);
+}
+
+@keyframes ray-drift {
+  0%, 100% { transform: translateX(0); }
+  50% { transform: translateX(30%); }
+}
+
+/* Stars: a mix of ones drifting slowly in place and ones falling the full
+   height of the screen, so the motion actually reads as movement. */
+.particles {
+  position: absolute; width: 100%; height: 100%;
+}
+.particle {
+  position: absolute; width: 3px; height: 3px; border-radius: 50%;
+  background: var(--forest);
+  box-shadow: 0 0 5px 1px rgba(30, 90, 70, .35);
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  will-change: transform, opacity;
+}
+/* Every 3rd star drifts gently rather than falling, so the field feels layered. */
+.particle:nth-child(3n) {
+  background: var(--signal);
+  box-shadow: 0 0 5px 1px rgba(200, 50, 31, .3);
+  animation-name: star-drift; animation-timing-function: ease-in-out;
+}
+.particle:not(:nth-child(3n)) { animation-name: star-fall; }
+
+@keyframes star-fall {
+  0%   { transform: translateY(-6vh) translateX(0); opacity: 0; }
+  8%   { opacity: .55; }
+  92%  { opacity: .5; }
+  100% { transform: translateY(106vh) translateX(18px); opacity: 0; }
+}
+@keyframes star-drift {
+  0%, 100% { transform: translate(0, 0) scale(1); opacity: .2; }
+  50% { transform: translate(22px, -34px) scale(1.3); opacity: .45; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .ray, .particle { animation: none; }
+}
+@media (max-width: 640px) {
+  .ray { filter: blur(50px); }
+}
 
 /* Icon + label site navigation — the ONE nav, right-aligned, sits below the
    hero actions on Home and below each page's heading elsewhere. */
@@ -111,13 +169,16 @@ body {
 }
 @media (max-width: 560px) { .quick-nav ul { justify-content: flex-start; } }
 
-/* Scroll-triggered navigation - appears on scroll */
-.scroll-nav {
-  opacity: 0; transform: translateY(-10px); transition: opacity .3s ease, transform .3s ease;
-  pointer-events: none;
+/* Always-visible navigation - faded by default, visible on hover */
+.quick-nav {
+  position: fixed; bottom: 2rem; left: 50%; transform: translateX(-50%); z-index: 40;
+  opacity: 0.4; transition: opacity .3s ease;
 }
-.scroll-nav.is-visible {
-  opacity: 1; transform: translateY(0); pointer-events: auto;
+.quick-nav:hover {
+  opacity: 1;
+}
+.quick-nav ul {
+  display: flex; flex-wrap: wrap; justify-content: center; gap: .6rem;
 }
 
 .kicker { font-family: var(--font-display); font-weight: 650; font-size: .85rem; letter-spacing: .12em; text-transform: uppercase; color: var(--forest); margin: 0 0 .75rem; display: inline-flex; align-items: center; gap: .4rem; }
@@ -612,27 +673,28 @@ html:not(.js) .rotator-item:first-child { opacity: 1; transform: none; }
    MODALS
    ========================================================================== */
 .modal {
-  border: none; border-radius: 8px; padding: 0; max-width: 90%; width: 100%; max-height: 90vh;
-  background: var(--paper); box-shadow: 0 10px 40px rgba(16, 35, 28, 0.15);
+  border: none; border-radius: 0; padding: 0; width: 100%; height: 100%;
+  max-width: 100%; max-height: 100vh; background: var(--paper);
+  position: fixed; top: 0; left: 0; margin: 0;
 }
-.modal::backdrop { background: rgba(16, 35, 28, 0.5); }
+.modal::backdrop { background: rgba(16, 35, 28, 0.3); }
 .modal-content { display: flex; flex-direction: column; height: 100%; }
 .modal-header {
-  display: flex; justify-content: space-between; align-items: center; padding: 1.5rem;
-  border-bottom: 1px solid var(--line);
+  display: flex; justify-content: space-between; align-items: center; padding: 1.5rem 2rem;
+  border-bottom: 1px solid var(--line); background: var(--bone); flex-shrink: 0;
 }
 .modal-header h2 { margin: 0; font-size: 1.5rem; }
 .modal-close {
-  background: none; border: none; font-size: 2rem; cursor: pointer; color: var(--muted);
-  transition: color .2s ease; padding: 0; width: 2rem; height: 2rem; display: flex; align-items: center; justify-content: center;
+  background: none; border: none; font-size: 2.5rem; cursor: pointer; color: var(--muted);
+  transition: color .2s ease; padding: 0; width: 2.5rem; height: 2.5rem; display: flex; align-items: center; justify-content: center; line-height: 1;
 }
 .modal-close:hover { color: var(--ink); }
 .modal-body {
-  flex: 1; overflow-y: auto; padding: 0;
+  flex: 1; overflow-y: auto; padding: 0; display: flex; align-items: center; justify-content: center;
 }
 .modal-body embed { width: 100%; height: 100%; }
 .modal-footer {
-  border-top: 1px solid var(--line); padding: 1.5rem; display: flex; justify-content: flex-end; gap: 1rem;
+  border-top: 1px solid var(--line); padding: 1.5rem 2rem; display: flex; justify-content: flex-end; gap: 1rem; background: var(--bone); flex-shrink: 0;
 }
 
 /* "Works on my machine" pop animation */
@@ -646,16 +708,4 @@ html:not(.js) .rotator-item:first-child { opacity: 1; transform: none; }
 }
 @media (prefers-reduced-motion: reduce) {
   .stray-note { animation: none; }
-}
-
-/* Always-visible navigation - faded by default, visible on hover */
-.quick-nav {
-  position: fixed; bottom: 2rem; left: 50%; transform: translateX(-50%); z-index: 40;
-  opacity: 0.4; transition: opacity .3s ease;
-}
-.quick-nav:hover {
-  opacity: 1;
-}
-.quick-nav ul {
-  display: flex; flex-wrap: wrap; justify-content: center; gap: .6rem;
 }
