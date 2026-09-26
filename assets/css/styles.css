@@ -647,3 +647,15 @@ html:not(.js) .rotator-item:first-child { opacity: 1; transform: none; }
 @media (prefers-reduced-motion: reduce) {
   .stray-note { animation: none; }
 }
+
+/* Always-visible navigation - faded by default, visible on hover */
+.quick-nav {
+  position: fixed; bottom: 2rem; left: 50%; transform: translateX(-50%); z-index: 40;
+  opacity: 0.4; transition: opacity .3s ease;
+}
+.quick-nav:hover {
+  opacity: 1;
+}
+.quick-nav ul {
+  display: flex; flex-wrap: wrap; justify-content: center; gap: .6rem;
+}
