@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Caroline Njogu — Full-Stack Developer</title>
+  <meta name="description" content="Caroline Njogu is a Full-Stack Developer with a UI/UX and Product Design background, building digital products across the front end, back end, APIs and user experience.">
+  <meta name="theme-color" content="#f0f1ec">
+  <meta property="og:title" content="Caroline Njogu — Full-Stack Developer">
+  <meta property="og:description" content="Caroline Njogu is a Full-Stack Developer with a UI/UX and Product Design background, building digital products across the front end, back end, APIs and user experience.">
+  <meta property="og:type" content="website">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%231e5a46'/%3E%3Crect x='6' y='6' width='7' height='7' fill='%23c8321f'/%3E%3Ctext x='6' y='27' font-family='Arial' font-weight='700' font-size='13' fill='%23f0f1ec'%3ECN%3C/text%3E%3C/svg%3E">
+  <link rel="preload" href="assets/fonts/bricolage-grotesque-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="assets/fonts/newsreader-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="assets/css/styles.css">
+  <script>document.documentElement.classList.add("js");</script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <div class="bg-motion" aria-hidden="true"><span class="bg-bubble" style="width:220px;height:220px;left:6%;top:78%;background:var(--forest);animation-duration:26s;animation-delay:0s"></span><span class="bg-bubble" style="width:140px;height:140px;left:82%;top:62%;background:var(--signal);animation-duration:20s;animation-delay:3s"></span><span class="bg-bubble" style="width:300px;height:300px;left:42%;top:88%;background:var(--forest);animation-duration:32s;animation-delay:6s"></span><span class="bg-bubble" style="width:110px;height:110px;left:18%;top:38%;background:var(--deep);animation-duration:18s;animation-delay:2s"></span><span class="bg-bubble" style="width:190px;height:190px;left:68%;top:28%;background:var(--forest);animation-duration:24s;animation-delay:9s"></span><span class="bg-bubble" style="width:120px;height:120px;left:92%;top:12%;background:var(--signal);animation-duration:22s;animation-delay:5s"></span><span class="bg-bubble" style="width:260px;height:260px;left:26%;top:6%;background:var(--deep);animation-duration:30s;animation-delay:1s"></span></div>
+
+  <header class="site-header">
+    <div class="wrap">
+      <a class="brand" href="index.html" aria-label="Caroline Njogu — home">Caroline Njogu</a>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="wrap hero" aria-labelledby="hero-name">
+      <div class="hero-copy">
+        <p class="hero-intro"><span>
+          My Name is </span></p>
+        <h1 class="hero-name" id="hero-name"><span>
+          Caroline</span><span>Njogu .</span></h1>
+        <p class="hero-title"> A Full-Stack Developer</p>
+        <p class="hero-support">Building digital products across the front end, back end, and user experience.</p>
+        <div class="rotator">
+          <span class="sr-only">Also: Front-End Developer, Back-End Developer, and UI/UX Designer.</span>
+          <div class="rotator-track" aria-hidden="true">
+            <span class="rotator-item">Front-End Developer</span>
+            <span class="rotator-item">Back-End Developer</span>
+            <span class="rotator-item">UI/UX Designer</span>
+          </div>
+        </div>
+        <div class="hero-actions">
+          <ul class="social-inline" aria-label="Social links">
+            <li><a href="https://linkedin.com/in/carolinenjogu" data-link="linkedin" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn (opens in a new tab)"><svg class="icon" viewBox="0 0 128 128" aria-hidden="true" focusable="false"><path d="M116 3H12a8.91 8.91 0 00-9 8.8v104.42a8.91 8.91 0 009 8.78h104a8.93 8.93 0 009-8.81V11.77A8.93 8.93 0 00116 3zM39.17 107H21.06V48.73h18.11zm-9-66.21a10.5 10.5 0 1110.49-10.5 10.5 10.5 0 01-10.54 10.48zM107 107H88.89V78.65c0-6.75-.12-15.44-9.41-15.44s-10.87 7.36-10.87 15V107H50.53V48.73h17.36v8h.24c2.42-4.58 8.32-9.41 17.13-9.41C103.6 47.28 107 59.35 107 75z"/></svg></a></li>
+            <li><a href="https://github.com/caroline568" data-link="github" target="_blank" rel="noopener noreferrer" aria-label="GitHub (opens in a new tab)"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg></a></li>
+            <li><a href="https://kavaroagency.com" data-link="kavaro" target="_blank" rel="noopener noreferrer" aria-label="Kavaro Agency (opens in a new tab)"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M5 3h3v7.2L15.2 3h4L11.4 11.2 19.6 21h-4L8 12.1V21H5z"/></svg></a></li>
+          </ul>
+          <a class="btn" href="resume/Caroline-Njogu-Resume.pdf" data-resume data-modal-resume><svg class="icon icon--sm" viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4v11m0 0-4.5-4.5M12 15l4.5-4.5M5 20h14"/></svg>Download Resume</a>
+          <a class="link-arrow" href="projects.html">View projects</a>
+        </div>
+        <nav class="quick-nav scroll-nav" aria-label="Site navigation"><ul><li><a class="quick-nav-item" href="index.html" aria-current="page"><svg class="quick-nav-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M4 11.5 12 4l8 7.5"/><path d="M6 10v9h12v-9"/><path d="M10 19v-5h4v5"/></svg><span>Home</span></a></li><li><a class="quick-nav-item" href="projects.html"><svg class="quick-nav-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="4" y="4" width="7" height="7" rx="1"/><rect x="13" y="4" width="7" height="7" rx="1"/><rect x="4" y="13" width="7" height="7" rx="1"/><rect x="13" y="13" width="7" height="7" rx="1"/></svg><span>Projects</span></a></li><li><a class="quick-nav-item" href="about.html"><svg class="quick-nav-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="12" cy="8" r="3.2"/><path d="M5 20c1.5-4 5-6 7-6s5.5 2 7 6"/></svg><span>About</span></a></li><li><a class="quick-nav-item" href="contact.html"><svg class="quick-nav-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="3.5" y="5.5" width="17" height="13" rx="1.5"/><path d="m4 6.5 8 6.5 8-6.5"/></svg><span>Contact</span></a></li><li><a class="quick-nav-item" href="more.html"><svg class="quick-nav-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="6" cy="12" r="1.4" fill="currentColor" stroke="none"/><circle cx="12" cy="12" r="1.4" fill="currentColor" stroke="none"/><circle cx="18" cy="12" r="1.4" fill="currentColor" stroke="none"/></svg><span>More</span></a></li></ul></nav>
+      </div>
+
+      <figure class="portrait">
+        <!-- Replace assets/img/profile.webp with your own photo (square or near-square works best). -->
+        <div class="portrait-frame">
+          <img src="assets/img/profile.webp" width="800" height="800" alt="Portrait of Caroline Njogu" onerror="this.parentElement.classList.add('is-empty')">
+        </div>
+        <figcaption class="portrait-note">Seeking a full-stack developer role</figcaption>
+      </figure>
+    </section>
+
+  </main>
+
+  <!-- Resume preview modal -->
+  <dialog class="modal modal--resume" id="resume-modal">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2>Resume Preview</h2>
+        <button class="modal-close" aria-label="Close resume preview">&times;</button>
+      </div>
+      <div class="modal-body">
+        <embed src="resume/Caroline-Njogu-Resume.pdf" type="application/pdf">
+      </div>
+      <div class="modal-footer">
+        <a class="btn" href="resume/Caroline-Njogu-Resume.pdf" download="Caroline-Njogu-Resume.pdf"><svg class="icon icon--sm" viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4v11m0 0-4.5-4.5M12 15l4.5-4.5M5 20h14"/></svg>Download</a>
+      </div>
+    </div>
+  </dialog>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <span>© 2026 Caroline Njogu. Nairobi, Kenya.</span>
+      <span>Full-Stack Developer . AI . UI/UX Designer. </span>
+    </div>
+  </footer>
+
+  <script src="assets/js/config.js"></script>
+  <script src="assets/js/icons.js"></script>
+  <script src="assets/js/tech.js"></script>
+  <script src="assets/js/main.js"></script>
+
+</body>
+</html>
