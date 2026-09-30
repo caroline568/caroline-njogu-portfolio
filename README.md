@@ -1,65 +1,162 @@
 # Caroline Njogu — Portfolio
 
-A static, five-page portfolio (Home, Projects, About, Contact, More). No build step, no dependencies:
-plain HTML, CSS and JavaScript, with the fonts and icons bundled locally.
+**Full-Stack Developer building practical digital products with code, product thinking, and AI.**
 
-## Run it
+[Portfolio](https://caroline-cv.vercel.app) · [LinkedIn](https://linkedin.com/in/carolinenjogu) · [GitHub](https://github.com/caroline568)
 
-Open `index.html` in a browser, or serve the folder:
+---
 
-    python3 -m http.server 8000
+## About
 
-Deploy by dragging the folder onto Vercel, Netlify or Cloudflare Pages (or push it to a repo they watch).
-This is a static, multi-page site — it does not need `npm install`, `vite`, or a build step of any kind.
-If your GitHub repo has old React files in it (`package.json`, `vite.config.js`, `src/`), delete them so
-Vercel doesn't try to build this as a React app.
+I'm Caroline Njogu, a Full-Stack Developer with a background in Product Design and a growing focus on AI-powered applications.
 
-## Making the contact form actually deliver to your inbox
+I enjoy taking an idea from **problem → interface → code → working product**.
 
-Right now, submitting the form opens the visitor's own email app with the message pre-filled — it works,
-but it depends on them hitting send. To have messages land in your inbox automatically with no extra step
-for the visitor:
+My work spans full-stack web applications, APIs, financial technology, product design, and AI-enabled experiences. I care about building things that are useful in the real world—not just technically impressive demos.
 
-1. Go to formspree.io and sign up free.
-2. Create a form, point it at your email, and copy the endpoint it gives you
-   (looks like `https://formspree.io/f/xxxxxxxx`).
-3. Paste it into `assets/js/config.js`:
+This repository contains the source code for my personal portfolio.
 
-       contactForm: {
-         endpoint: "https://formspree.io/f/xxxxxxxx",
-         ...
-       }
+## Featured Work
 
-That's the only step — the form code already knows how to send to it.
+### PesaRate
 
-## What to edit
+**Currency and travel-money intelligence workspace**
 
-| I want to…                         | Edit                                           |
-| ---------------------------------- | ---------------------------------------------- |
-| Change my email, LinkedIn, GitHub, Kavaro link, or resume path | `assets/js/config.js` |
-| Replace my photo                   | `assets/img/profile.webp` (keep the filename)  |
-| Replace my resume                  | `resume/Caroline-Njogu-Resume.pdf` (keep the filename) |
-| Add screenshots                    | `assets/img/screenshots/` — see the README.txt there |
-| Edit or add a project case study   | `assets/js/projects-data.js`                   |
-| Change colours and fonts           | the tokens at the top of `assets/css/styles.css` |
-| Connect the contact form           | see above, or `contactForm.endpoint` in `assets/js/config.js` |
-| Change the background bubbles      | the `BUBBLES` array in `build.py` if you regenerate, or edit the `<div class="bg-motion">` markup directly in each `.html` file |
-| Change the small note at the bottom of More | search `stray-note` in `more.html` |
+A full-stack application designed to make currency conversion, exchange-rate comparison, provider fees, travel budgeting, and rate monitoring easier to understand in one place.
 
-The same URLs are also written into the HTML as a fallback, so if you change a link in `config.js`,
-search-and-replace the old one in the `.html` files too.
+**Built with:** React · Vite · JavaScript · Flask · Python · PostgreSQL · JWT · REST APIs
 
-## Structure
+[View live project](https://pesarate.vercel.app/)
 
-    index.html  projects.html  about.html  contact.html  more.html
-    assets/css/styles.css          design tokens + all styles
-    assets/js/config.js            links, email, resume, form endpoint
-    assets/js/projects-data.js     the five case studies
-    assets/js/tech.js, icons.js    technology names and inline SVG icons
-    assets/js/main.js              nav-tile rendering, role rotator, tech grids
-    assets/js/projects.js          the project workspace
-    assets/js/contact.js           form validation and sending
-    assets/fonts/                  Bricolage Grotesque + Newsreader (SIL OFL)
-    resume/                        resume PDF
+---
 
-Brand icons come from Simple Icons (CC0) and Devicon (MIT).
+### Kavaro Agency
+
+**Digital product studio platform**
+
+A website and digital platform for Kavaro Agency, covering digital product design, web development, AI-powered solutions, and digital transformation.
+
+**Built with:** React · Vite · Node.js · Express · Flask · SQLAlchemy · Cloudflare
+
+[Visit Kavaro Agency](https://kavaroagency.com)
+
+---
+
+### More Projects
+
+The portfolio also includes work across:
+
+* Inventory management
+* REST APIs
+* AI-powered applications
+* Product and UI/UX design
+* Real-time data experiences
+* Experimental web products
+
+See the [Projects](https://caroline-cv.vercel.app/projects) page for the full collection and case studies.
+
+## Technical Focus
+
+**Frontend**
+
+React · Vite · JavaScript · HTML · CSS · Responsive UI
+
+**Backend**
+
+Python · Flask · Node.js · Express · REST APIs
+
+**Data & Auth**
+
+PostgreSQL · SQLAlchemy · JWT · Supabase
+
+**Product & Design**
+
+UI/UX · Product Design · Prototyping · User Flows · Design Systems
+
+**AI**
+
+AI integrations · AI-powered web applications · Generative AI
+
+**Tools & Deployment**
+
+Git · GitHub · Vercel · Cloudflare · Figma
+
+## What This Portfolio Demonstrates
+
+This isn't just a collection of screenshots.
+
+The projects are intended to show how I approach:
+
+* Turning a problem into a usable product
+* Designing interfaces before and alongside implementation
+* Building frontend experiences that connect to real APIs
+* Developing backend services and database-backed applications
+* Working with authentication and CRUD workflows
+* Integrating AI into practical products
+* Thinking about both the user experience and the underlying system
+* Taking a product from an idea to a deployed application
+
+## Repository Structure
+
+```text
+caroline-njogu-portfolio/
+├── index.html
+├── projects.html
+├── about.html
+├── contact.html
+├── more.html
+│
+├── assets/
+│   ├── css/
+│   │   └── styles.css
+│   ├── js/
+│   │   ├── config.js
+│   │   ├── main.js
+│   │   ├── projects.js
+│   │   ├── projects-data.js
+│   │   └── tech.js
+│   ├── fonts/
+│   └── img/
+│
+└── resume/
+    └── Caroline-Njogu-Resume.pdf
+```
+
+## Run Locally
+
+This portfolio is a lightweight static site with no build step.
+
+```bash
+git clone https://github.com/caroline568/caroline-njogu-portfolio.git
+cd caroline-njogu-portfolio
+python3 -m http.server 8000
+```
+
+Then open:
+
+```text
+http://localhost:8000
+```
+
+No `npm install` or build process is required.
+
+## Design
+
+The portfolio uses a deliberately editorial visual direction rather than a conventional developer-dashboard aesthetic.
+
+Typography combines **Bricolage Grotesque** with **Newsreader**, with subtle motion and responsive layouts used to keep the experience expressive without getting in the way of the work.
+
+Accessibility and responsive behavior are considered throughout the interface.
+
+## Contact
+
+I'm open to opportunities involving **full-stack development, product engineering, AI-powered applications, and digital products**.
+
+**Caroline Njogu**
+
+[Portfolio](https://caroline-cv.vercel.app) · [LinkedIn](https://linkedin.com/in/carolinenjogu) · [GitHub](https://github.com/caroline568)
+
+---
+
+> It works on my machine. The machine has been advised not to speak.
+
