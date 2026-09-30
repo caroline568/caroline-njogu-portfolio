@@ -195,7 +195,7 @@ body {
 }
 
 .easter-egg:hover {
-  color: rgba(255, 255, 255, 0.9);
+  color: rgba(34, 34, 34, 0.9);
 }
 img, svg { display: block; max-width: 100%; }
 a { color: inherit; }
