@@ -185,8 +185,18 @@ body {
 .kicker-icon { width: 1.1rem; height: 1.1rem; fill: currentColor; }
 
 /* Small, unlabeled note tucked at the bottom of the page — not flagged as a joke, just there to find. */
-.stray-note { margin: 3rem 0 0; font-family: var(--font-text); font-style: italic; font-size: .85rem; color: var(--muted); text-align: center; opacity: .7; }
+.easter-egg {
+  text-align: center;
+  margin: 5rem auto 2rem;
+  font-size: 0.8rem;
+  color: rgba(255, 255, 255, 0.55);
+  font-style: italic;
+  letter-spacing: 0.01em;
+}
 
+.easter-egg:hover {
+  color: rgba(255, 255, 255, 0.9);
+}
 img, svg { display: block; max-width: 100%; }
 a { color: inherit; }
 p { margin: 0 0 1em; }
