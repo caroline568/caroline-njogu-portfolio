@@ -189,13 +189,13 @@ body {
   text-align: center;
   margin: 5rem auto 2rem;
   font-size: 0.8rem;
-  color: rgba(255, 255, 255, 0.55);
+  color: rgba(0, 0, 0, 0.55);
   font-style: italic;
   letter-spacing: 0.01em;
 }
 
 .easter-egg:hover {
-  color: rgba(34, 34, 34, 0.9);
+  color: rgba(91, 73, 73, 0.9);
 }
 img, svg { display: block; max-width: 100%; }
 a { color: inherit; }
