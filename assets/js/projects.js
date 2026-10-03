@@ -15,6 +15,7 @@
   }
 
   function host(url) {
+    if (!url) return "";
     try {
       var u = new URL(url);
       return u.hostname.replace(/^www\./, "") + (u.pathname !== "/" ? u.pathname.replace(/\/$/, "") : "");
@@ -56,10 +57,10 @@
     return (
       '<h2 class="case-title" tabindex="-1">' + esc(p.name) + "</h2>" +
       (p.tagline ? '<p class="case-tagline">' + esc(p.tagline) + "</p>" : "") +
-      '<a class="link-arrow case-link" href="' + esc(p.link.url) + '" target="_blank" rel="noopener noreferrer">' +
-        esc(p.link.label || "Live Project") + " " + ICON_UP + '<span class="sr-only"> (opens in a new tab)</span></a>' +
+      (p.link && p.link.url ? '<a class="link-arrow case-link" href="' + esc(p.link.url) + '" target="_blank" rel="noopener noreferrer">' +
+        esc(p.link.label || "Live Project") + " " + ICON_UP + '<span class="sr-only"> (opens in a new tab)</span></a>' : "") +
       '<dl class="meta">' + meta.map(function (m) { return metaRow(m[0], m[1]); }).join("") + "</dl>" +
-      '<figure class="shot" style="margin:0"><div class="shot-bar">' + esc(host(p.link.url)) + "</div>" +
+      '<figure class="shot" style="margin:0"><div class="shot-bar">' + esc(p.link && p.link.url ? host(p.link.url) : (p.context || p.name)) + "</div>" +
         '<div class="shot-body"><div class="shot-empty"><strong>' + esc(p.name) + "</strong><span>" +
         esc(p.screenshot || "Add a screenshot in projects-data.js") + "</span></div>" +
         (p.screenshot ? '<img src="' + esc(p.screenshot) + '" alt="' + esc(p.name) + ' screenshot" loading="lazy">' : "") +

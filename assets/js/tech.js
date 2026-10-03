@@ -27,5 +27,7 @@ window.TECH = {
   render:       { name: "Render",          icon: "render" },
   cloudflare:   { name: "Cloudflare",      icon: "cloudflare" },
   postman:      { name: "Postman",         icon: "postman" },
+  laravel:      { name: "Laravel",         icon: "generic" },
+  vue:          { name: "Vue",             icon: "generic" },
   vscode:       { name: "VS Code",         icon: "vscode" }
 };

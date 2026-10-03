@@ -89,6 +89,41 @@ window.PROJECTS = [
   },
 
   {
+    slug: "navkids-africa",
+    name: "NavKids Africa",
+    tagline: "School transportation management platform",
+    /* No public link yet: add link: { url: "https://...", label: "Live Project" } when one exists */
+    context: "NavKids Africa · Remote",
+    role: "Full-Stack Developer",
+    timeline: "September 2026 – Present",
+    classification: "Full-Stack / Transportation / Web & Mobile Platform",
+    extra: { label: "Team", value: "Five-developer engineering team" },
+    screenshot: "assets/img/screenshots/navkids-africa.png",
+    mission: [
+      "NavKids Africa is a school transportation management platform connecting school administrators, drivers, parents and students through web and mobile applications.",
+      "I contribute as a Full-Stack Developer in a five-developer engineering team, following a defined API and frontend workstream on a production-oriented platform that handles real-time transportation data and children's information."
+    ],
+    architecture: [
+      ["Admin dashboard", "School Admin Dashboard built with Laravel and Vue"],
+      ["Driver app", "Integrated with the platform backend for trip operations, route progress, student check-in/check-out and location tracking"],
+      ["Offline support", "Offline event synchronization for low-connectivity environments"],
+      ["Access model", "Role-based access with school-scoped data"],
+      ["Integration", "API integration across web and mobile clients"]
+    ],
+    challenges: [
+      { title: "Many roles, one platform", body: "Administrators, drivers, parents and students each need a different view, so role-based access and school-scoped data keep every user inside the right boundaries." },
+      { title: "Low-connectivity environments", body: "Interfaces are responsive and the driver app synchronizes events made offline, so trips keep running when the network drops." },
+      { title: "Real-time data about children", body: "Live trip monitoring, attendance and emergency management work with real-time transportation data and children's information, so accuracy and care matter." }
+    ],
+    victory: {
+      difficulty: "Schools needed one place to run fleets, routes, drivers, students and guardians, while drivers work in places with unreliable connectivity.",
+      action: "Developed the School Admin Dashboard (fleet, driver and vehicle assignments, routes and stops, student and guardian records, live trip monitoring, attendance, emergency management and reporting) and integrated the Driver Application with the backend.",
+      outcome: "Administrators can manage and monitor transport from one dashboard, and drivers can run trips, check students in and out, and share location even when connectivity is poor."
+    },
+    stack: ["laravel", "vue", "git", "github"]
+  },
+
+  {
     slug: "inventory-management-system",
     name: "Inventory Management System",
     tagline: "RESTful inventory and product intelligence API",
