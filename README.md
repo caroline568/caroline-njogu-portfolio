@@ -42,6 +42,16 @@ A website and digital platform for Kavaro Agency, covering digital product desig
 
 ---
 
+### NavKids Africa
+
+**School transportation management platform**
+
+A platform connecting school administrators, drivers, parents, and students through web and mobile applications. I contribute to the School Admin Dashboard (fleet, routes, students, live trip monitoring, attendance, and reporting) and the Driver Application integration, including check-in/check-out, location tracking, and offline sync, as part of a five-developer team.
+
+**Built with:** Laravel · Vue
+
+---
+
 ### More Projects
 
 The portfolio also includes work across:
