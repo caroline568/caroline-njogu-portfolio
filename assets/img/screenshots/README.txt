@@ -2,7 +2,6 @@ Drop your project screenshots here. Each is picked up automatically by its filen
 
   pesarate.png
   kavaro-agency.png
-  navkids-africa.png
   inventory-management-system.png
   workout-tracker-api.png
   mood-tracker.png
