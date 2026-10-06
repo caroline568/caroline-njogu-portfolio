@@ -89,6 +89,44 @@ window.PROJECTS = [
   },
 
   {
+    slug: "jalia-healthcare",
+    name: "Jalia Healthcare",
+    tagline: "Endometriosis education and personal care companion",
+    link: { url: "https://jalia-health-care.vercel.app/", label: "Live Project" },
+    role: "Full-Stack Developer",
+    timeline: "2026",
+    classification: "Full-Stack / HealthTech / Progressive Web App",
+    extra: { label: "Focus", value: "Education, privacy and low-connectivity use" },
+    screenshot: "assets/img/screenshots/jalia-healthcare.png",
+    mission: [
+      "Many people live with severe period pain for years before anyone gives it a name. Jalia Healthcare is built around that journey: from \u201cwhy are my periods this painful?\u201d to understanding endometriosis, getting appropriate help and living with it.",
+      "It pairs a learning library in English and Kiswahili with local-first pain, period and symptom tracking and appointment preparation, so someone can walk into a clinic with a clear record. Learning and tracking work without an account."
+    ],
+    architecture: [
+      ["Frontend", "React 18 with Vite and React Router"],
+      ["Backend", "Flask API served with Gunicorn"],
+      ["Database", "SQLite for accounts and encrypted backups"],
+      ["Authentication", "Optional accounts with hashed passwords, session cookies and CSRF protection"],
+      ["Privacy", "Health backups are encrypted in the browser (AES-GCM) before upload; the API stores only the encrypted envelope"],
+      ["Offline", "Service worker, web manifest and local-first browser storage"],
+      ["Languages", "English and Kiswahili"],
+      ["Testing", "Backend API tests with unittest"],
+      ["Deployment", "Frontend on Vercel, API on Render"]
+    ],
+    challenges: [
+      { title: "Privacy for sensitive health data", body: "Symptom and appointment records are personal, so tracking stays local-first and works without an account. Optional backups are encrypted in the browser with a key derived from the user\u2019s passphrase before they reach the server." },
+      { title: "Useful on a weak connection", body: "A service worker caches the app shell and key assets, and the learning content is bundled with the app, so core features keep working on a poor or dropped connection." },
+      { title: "Education without diagnosing", body: "The body-area explorer and learning content use non-diagnostic language and offer text alternatives. Sources such as NHS and ESHRE guidance are shown, and the medical copy is marked as prototype content pending clinical review." }
+    ],
+    victory: {
+      difficulty: "Explaining symptoms and history in a short appointment is hard, and health data is too sensitive to hand to just any app.",
+      action: "Built a journey-based learning library and a local-first tracker with a printable, shareable appointment summary, then added optional browser-encrypted backup so readable health data never reaches the server.",
+      outcome: "A person can learn, track and prepare for a clinic visit in English or Kiswahili without creating an account, and back up their records only if they choose to."
+    },
+    stack: ["react", "vite", "javascript", "python", "flask", "render", "vercel", "git", "github"]
+  },
+
+  {
     slug: "inventory-management-system",
     name: "Inventory Management System",
     tagline: "RESTful inventory and product intelligence API",
